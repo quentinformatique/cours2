@@ -1,0 +1,108 @@
+Etape 1 :
+
+CREATE DATABASE IF NOT EXISTS mezabi DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+
+Etape 2:
+
+CREATE TABLE a_categories (
+    CODE_CATEGORIE int(11) NOT NULL AUTO_INCREMENT,
+    DESIGNATION varchar(30) NOT NULL,
+    Primary key (CODE_CATEGORIE)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Etape 3:
+
+CREATE TABLE a_couleurs (
+    CODE_COULEUR int(11) NOT NULL AUTO_INCREMENT,
+    DESIGNATION varchar(30) NOT NULL,
+    Primary key (CODE_COULEUR)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Etape 4:
+
+CREATE TABLE a_tailles (
+    TAILLE varchar(6) NOT NULL,
+    Primary key (TAILLE)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Etape 5:
+
+CREATE TABLE articles (
+    CODE_PRODUIT int(11) primary key NOT NULL AUTO_INCREMENT,
+    DESIGNATION varchar(30) NOT NULL,
+    CATEGORIE int(11) NOT NULL,
+    CONSTRAINT fk_categories FOREIGN KEY (CATEGORIE) REFERENCES a_categories(CODE_CATEGORIE),
+    index IndexDesigniation (DESIGNATION)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+Etape 6:
+
+CREATE TABLE stocksPrix (
+    CODE_BARRE int(13) NOT NULL,
+    STOCK int(255) NOT NULL,
+    ARTICLE int(11) NOT NULL,
+    COULEUR int(11) NOT NULL,
+    TAILLE varchar(6) NOT NULL,
+    PRIX numeric(6,2),
+    PRIMARY KEY (ARTICLE, COULEUR, TAILLE) ,
+    CONSTRAINT fk_article FOREIGN KEY (ARTICLE) REFERENCES articles(CODE_PRODUIT),
+    CONSTRAINT fk_taille FOREIGN KEY (TAILLE) REFERENCES a_tailles(TAILLE),
+    CONSTRAINT fk_couleur FOREIGN KEY (COULEUR) REFERENCES a_couleurs(CODE_COULEUR)
+)
+
+
+Etape 7:
+
+CREATE TABLE c_type (
+    TYPE_CLIENT varchar(30) NOT NULL,
+    Primary key (TYPE_CLIENT)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Etape 8:
+
+CREATE TABLE clients (
+    CODE_CLIENT varchar(15) PRIMARY KEY NOT NULL,
+    NOM_MAGASIN varchar(30) NOT NULL,
+    ADRESSE_1 varchar(35) NOT NULL,
+    ADRESSE_2 varchar(35) NOT NULL,
+    CODE_POSTAL varchar(5) NOT NULL,
+    VILLE varchar(35) NOT NULL,
+    NOM_RESPONSABLE varchar(35) NOT NULL,
+    TELEPHONE varchar(10) NOT NULL,
+    MAIL varchar(35) NOT NULL,
+    TYPE_CLIENT varchar(30) NOT NULL,
+    CONSTRAINT fk_type_client FOREIGN KEY (TYPE_CLIENT) REFERENCES c_type(TYPE_CLIENT)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Etape 9:
+
+CREATE TABLE  IF NOT EXISTS devis_entetes (
+    NUMERO_DEVIS int(11) PRIMARY KEY NOT NULL , 
+    DATE_DEVIS date NOT NULL,
+    CODE_CLIENT varchar(15) NOT NULL,
+    CONSTRAINT fk_codeclient FOREIGN KEY (CODE_CLIENT) REFERENCES clients(CODE_CLIENT)
+    )
+
+
+Etape 10:
+
+CREATE TABLE IF NOT EXISTS devis_lignes(NUM_DEVIS int(11),
+                                     ARTICLE int(11),
+                                     COULEUR int(11),
+                                     TAILLE int(11),
+                                     PRIX numeric(6,2) NOT NULL,
+                                     QTT int(10) NOT NULL,
+                                     PRIX numeric(6,2) NOT NULL,
+                                     CONSTRAINT fk_devis FOREIGN KEY (NUM_DEVIS) REFERENCES articles(NUMERO_DEVIS),
+                                     CONSTRAINT fk_produits FOREIGN KEY (ARTICLE) REFERENCES articles(CODE_ARTICLE),
+                                     CONSTRAINT fk_couleurs FOREIGN KEY (COULEUR) REFERENCES a_couleurs(CODE_COULEURS),
+                                     CONSTRAINT fk_tailles FOREIGN KEY (TAILLE) REFERENCES a_taille(CODE_TAILLE),
+                                     PRIMARY KEY (NUM_DEVIS,ARTICLE,COULEUR,TAILLE))
+
