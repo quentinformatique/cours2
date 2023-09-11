@@ -38,3 +38,8 @@ fontawesome-free-6.0.0-beta2-web/
 jquery/
 fa/
 gsap-public/
+
+data/
+.runtime/
+/qualiDev/tp2/tp2NB/nbproject/private/
+__pycache__/
