@@ -12,7 +12,6 @@
     <link href="src/css/style.css" rel="stylesheet">
     <!-- Feuille de style pour fontawesome -->
     <link href="src/fa/css/all.css" rel="stylesheet">
-    <script src="src/fa/js/all.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -27,31 +26,34 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="center">
-                    -- Bienvenue sur le sire de IUT BANK --
+                    -- Bienvenue sur le site de IUT BANK --
                 </h1>
-                <h3 class="center">Vous pourrez grâce à cette interface voir le détail de vos comptes et faire toutes vos opérations à distance </h3>
+                <h2 class="center">Vous pourrez grâce à cette interface voir le détail de vos comptes et faire toutes vos opérations à distance </h2>
             </div>
         </div>
         <form action="" method="post">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h3 class="center">Identifiant:</h3>
                     <input class="form-control" type="text" placeholder="Tapez votre numéro de compte">
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h3 class="center">Mot de passe:</h3>
                     <input class="form-control" type="password" placeholder="Tapez votre mot de passe">
                 </div>
                 <div class="col-12">
-                    <button class="btn-primary btn-lg w-100">Me connecter<i class="fa-solid fa-right-to-bracket"></i></button>
+                    <button class="btn-primary btn-lg w-100 m-2"><a class="text-white" href="src/pages/comptes.html"> Me connecter <i class="fa-solid fa-right-to-bracket"></i></a></button>
                 </div>
             </div>
         </form>
         <div class="row">
-            <div class="col-6">
+            <div class="col-3 center-button ">
                 <button class="btn-primary btn-lg">Nous contacter <i class="fa-solid fa-envelope"></i></button>
             </div>
-            <div class="col-6"></div>
+            <div class="col-3 offset-6">
+                <div class="text-dark center">Réalisé par</div>
+                <img class="img center" src="src/img/LogoIut.png" alt="logoIUT">
+            </div>
         </div>
     </div>
 </body>
