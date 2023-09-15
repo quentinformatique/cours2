@@ -3,7 +3,7 @@
  * TestPile.java                                                07/09/2023
  */
 
-package structuredonnees;
+package structuredonnees.pile;
 
 /**
  * test de la classe Pile

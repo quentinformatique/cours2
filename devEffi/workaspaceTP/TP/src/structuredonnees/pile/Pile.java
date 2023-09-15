@@ -3,7 +3,7 @@
  * Pile.java                                                07/09/2023
  */
 
- package structuredonnees;
+ package structuredonnees.pile;
 
 /**
  * Gestion des Piles

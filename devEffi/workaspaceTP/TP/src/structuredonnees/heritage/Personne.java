@@ -3,7 +3,7 @@
  * Personne.java                                        06/09/2023
  */
 
-package heritage;
+package structuredonnees.heritage;
 
 import java.util.Scanner;
 

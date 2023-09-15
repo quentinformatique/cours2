@@ -2,7 +2,7 @@
  * Individu.java                                                            09/09/20
  */
 
-package heritage;
+package structuredonnees.heritage;
 import java.util.Scanner;
 
 /**
