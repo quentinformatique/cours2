@@ -13,7 +13,7 @@ public class Etudiant extends Utilisateur {
     
     float note(String matiere) {
         // STUB
-        return 0;
+        return -1;
     }
 
     /**
