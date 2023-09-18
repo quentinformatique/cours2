@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 
@@ -23,9 +24,36 @@ public class GestionNotes {
      * 5. Enregistre les données sur fichier et lève le verrouillage lorsque la session est terminée.
      */
     
-    public static void main(List<String> args) {
-    }
+    public static void main(String[] args) {
+        int choix;
+        Scanner scanner = new Scanner(System.in);
+        
+        while(verrouDonneesFerme()) {
+            System.out.println("Les données sont verouillées");
+        }
+        
+        verrouillerDonnees(); 
+        initialiserDonnees();
+        
+        choix = 0;
+        do {
+            System.out.println("\"1\" pour se conncter, \"2\" pour quitter.");
+            System.out.print("Votre choix : ");
+            choix = scanner.nextInt();
+            
+            switch(choix) {
+                case 1:
+                    System.out.println("connexion : ");
+                    break;
+                case 2:
+                    System.out.println("quitter");
+                    break;
+                default:
+                    System.out.println("choix incorrext");
+            }
 
+        } while (choix != 2);
+    }
     /**
      * sessionEnseignant(e): Affiche en boucle le menu des opérations possibles pour un enseignant e. Opérations possibles : afficher, saisir ou modifier les notes d'une matière qu'il enseigne.
      */
