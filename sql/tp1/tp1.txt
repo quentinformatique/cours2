@@ -106,3 +106,38 @@ CREATE TABLE IF NOT EXISTS devis_lignes(NUM_DEVIS int(11),
                                      CONSTRAINT fk_tailles FOREIGN KEY (TAILLE) REFERENCES a_taille(CODE_TAILLE),
                                      PRIMARY KEY (NUM_DEVIS,ARTICLE,COULEUR,TAILLE))
 
+Etape 11:
+
+CREATE TABLE `factures_entetes` (
+  `ID_ENT_FCT` int(11) PRIMARY KEY NOT NULL,
+  `NO_FCT` int(11) NOT NULL,
+  `CLIENT` int(11) NOT NULL,
+  `DATE_FCT` date NOT NULL,
+   CONSTRAINT `fk_ClientFCT` FOREIGN KEY (`CLIENT`) REFERENCES `clients` (`ID_CLIENT`);
+) 
+
+
+
+Etape 12:
+
+CREATE TABLE `factures_lignes` (
+  `ID_LIG_FCT` int(11) PRIMARY KEY NOT NULL,
+  `ID_FCT` int(11) NOT NULL,
+  `ARTICLE` int(11) NOT NULL,
+  `COULEUR` int(11) NOT NULL,
+  `TAILLE` int(11) NOT NULL,
+  `QUANTITE` int(11) NOT NULL,
+  `PRIX` decimal(10,2) NOT NULL,
+  CONSTRAINT `fk_articleLigF` FOREIGN KEY (`ARTICLE`) REFERENCES `articles` (`ID_ARTICLE`),
+  CONSTRAINT `fk_couleurLigF` FOREIGN KEY (`COULEUR`) REFERENCES `a_couleurs` (`CODE_COULEUR`),
+  CONSTRAINT `fk_idFCT` FOREIGN KEY (`ID_FCT`) REFERENCES `factures_entetes` (`ID_ENT_FCT`),
+  CONSTRAINT `fk_tailleLigF` FOREIGN KEY (`TAILLE`) REFERENCES `a_tailles` (`CODE_TAILLE`);
+) 
+
+
+
+
+
+
+
+
