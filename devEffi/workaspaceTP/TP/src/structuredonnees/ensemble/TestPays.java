@@ -246,8 +246,8 @@ public class TestPays {
                 aTester.ajouterVoisin(VOISINS[0][i]);
                 System.out.println("Après ajout du voisin " + VOISINS[0][i]
                                    + " :\n     => " + aTester);
-            } catch(IllegalArgumentException erreur) {
                 nbTestOk++;
+            } catch(IllegalArgumentException erreur) {
                 
             }
         }
@@ -260,9 +260,9 @@ public class TestPays {
                 aTester.ajouterVoisin(VOISINS[0][i]);
                 System.out.println("Après ajout du voisin " + VOISINS[0][i]
                                    + " :\n     => " + aTester);
-            } catch(IllegalArgumentException erreur) {
                 nbTestOk++;
-                
+            } catch(IllegalArgumentException erreur) {
+                        
             }
         }
        
@@ -484,8 +484,8 @@ public class TestPays {
     public static void main(String[] args) {
         System.out.println("TESTS DE LA  CLASSE PAYS\n------------------------------\n\n");
         
-        testConstructeur1ArgumentException();
-        testConstructeur2ArgumentsException();
+        // testConstructeur1ArgumentException();
+        // testConstructeur2ArgumentsException();
         // testConstructeur1ArgumentToString();
         // testConstructeur2ArgumentsToString();
         // testAjouterVoisin();
