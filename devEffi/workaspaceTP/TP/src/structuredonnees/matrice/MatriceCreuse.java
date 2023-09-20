@@ -1,156 +1,94 @@
-package structuredonnees.matrice;
+/*
+ * TP Pour apprendre l'utilisation des ArrayList
+ * MatriceCreuse.java                                          15/09/2023
+ */
+
 import java.util.ArrayList;
-import java.util.Iterator;
+
+package structuredonnees.matrice;
 
 public class MatriceCreuse {
-	
-	private final int NB_COLONNES_DEFAULT = 5;
-	
-	private final int NB_LIGNES_DEFAULT = 5;
-	
-	private int ligne;
-	
-	private int colonne;
-	
-	private ArrayList<Coefficient> matrice;
-	
-	/**
-	 * Constructeur initialisant par default la matrice 5 lignes par 5 colonnes
-	 */
-	public MatriceCreuse() throws IllegalArgumentException {
-		this.ligne = NB_LIGNES_DEFAULT;
-		this.colonne = NB_COLONNES_DEFAULT;
-		matrice = new ArrayList<Coefficient>();
-	}
 
-	/**
-	 * Constructeur de la matrice
-	 * @param ligne 
-	 * @param colonne
-	 */
-	public MatriceCreuse(int ligne, int colonne) throws IllegalArgumentException {
-		if (ligne < 0 || colonne < 0) {
-			throw new IllegalArgumentException("lignes ou colonne invalide");
-		}
-		this.ligne = ligne;
-		this.colonne = colonne;
-		matrice = new ArrayList<Coefficient>();
-	}
-	
-	
-	/**
-	 * renvoie la valeur du coeficient situé a la position (ligne;colonne)
-	 * @param ligne
-	 * @param colonne
-	 * @return
-	 */
-	public double getValeur(int ligne, int colonne) throws IllegalArgumentException {
-		if (ligne > this.ligne || colonne > this.colonne ||
-					 ligne < 0 || colonne < 0) {
-			throw new IllegalArgumentException("lignes ou colonne invalide");
-		}
+    public ArrayList<Coefficient> listeCoefficients;
 
-		for (Coefficient coefficient : matrice) {
-			if (coefficient.getLigne() == ligne && coefficient.getColonne() == colonne) {
-				return coefficient.getValeur();
-			}
-		}
-		
-		return 0;
-	}
-	
-	/**
-     * Modifie la valeur d'un coefficent
-     * @param numLigne numéro de la ligne du coefficient à modifier
-     * @param numColonne numéro de la colonne
-     * @param valeur  nouvelle valeur du coefficient
-     * @throws IllegalArgumentException  levée si un argument est incohérent
+    public static final int LONGEUR_DEFAULT = 5;
+    public static final int LARGEUR_DEFAULT = 5;
+
+    /** 
+     * Constructeur de base pour la matrice creuse
      */
-    public void setValeur(int numLigne, int numColonne, double valeur)
-                                                    throws IllegalArgumentException {
-        
-    	if (ligne > this.ligne || colonne > this.colonne ||
-    			     ligne < 0 || colonne < 0) {
-			throw new IllegalArgumentException("lignes ou colonne invalide");
-		}
-        
-        // TODO : gérer le cas des coordonnées correctes
-    	
-    	this.matrice.add(new Coefficient(numLigne, numColonne, valeur));
-        
-       
+    public MatriceCreuse() {
+        this.nbLignes = LONGEUR_DEFAULT;
+        this.nbColonnes = LARGEUR_DEFAULT;
+        this.listeCoefficients = new ArrayList<Coefficient>();
     }
-	
-	/**
-     * Supprime un coefficient de la liste des coefficients.
-     * Si dans la liste des coefficients, il n'y a pas de coefficient situé à la ligne
-     * et colonne argument, la méthode est sans effet.
-     * De même si les coordonnées argument sont invalides : méthode sans effet
-     *  (pas d'exception levée dans ce cas, car méthode privée : ce sont les méthodes 
-     *   appelantes qui vérifieront la validité de la ligne et de la colonne)
-     * @param numLigne numéro de la ligne du coefficient
-     * @param numColonne numéro de la colonne du coefficient
-     * @return un booléen égal à vrai ssi la suppression a été effectuée
-     */
-    private boolean supprimer(int numLigne, int numColonne) {
-        int i;      // indice de parcours de la liste des coefficients
-        
-        // parcours de la liste à la recherche d'un coefficient situé à la position argument
-        for (i = 0; i < matrice.size() 
-                    && ! matrice.get(i).estSitue(numLigne, numColonne); i++);
-        
-        if (i < matrice.size()) {
-            
-            // coefficient trouvé en position i : il faut le supprimer 
-            /* TODO : écrire l'instruction pour supprimer le coefficient en position i*/
-            
-            
-            return true;
+
+    /**
+     * Constructeur d'une matrice creuse
+     * @param nbLignes nombre de lignes de la matrice
+     * @param nbColonnes nombre de colonnes de la matrice
+     * @throws IllegalArgumentException si le nombre de lignes ou de colonnes est invalide
+     */ 
+    public MatriceCreuse(int nbLignes, int nbColonnes) throws IllegalArgumentException {
+        if (nbLignes <= 0 || nbColonnes <= 0) {
+            throw new IllegalArgumentException("Nombre de lignes ou de colonnes invalide");
         } else {
+            this.nbLignes = nbLignes;
+            this.nbColonnes = nbColonnes;
+            this.listeCoefficients = new ArrayList<Coefficient>();
             
-            // pas de suppression possible
-            return false;
         }
     }
 
-	public static MatriceCreuse multiplication(MatriceCreuse a, MatriceCreuse b) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-
-	/**
-     * Affiche les coefficients de la liste
+    /**
+     * Méthode pour récuperer la valeur d'un coefficient
+     * @param ligne numéro de la ligne du coefficient
+     * @param colonne numéro de la colonne du coefficient
+     * @return int valeur la valeur du coefficient
+     * @throws IllegalArgumentException si le numéro de ligne ou de colonne est invalide
      */
-    public void afficher() {
-    
-         
-        if (true /* TODO : remplacer true par la condition qui dit que la liste des coefficients est vide */) {
-            
-            // cas particulier de la matrice nulle
-            System.out.println("La matrice est nulle.");
-        } else {                           
-            
-            // parcours de la liste dans le but d'afficher tous les coefficients
-            /* TODO : écrire la boucle de parcours de la liste des coefficients
-                      bien remarquer que dans la classe Coefficient, il y a une méthode toString */
-            
-          
+    public int getValeur(int ligne, int colonne) throws IllegalArgumentException {
+        if (ligne < 0 || ligne >= nbLignes || colonne < 0 || colonne >= nbColonnes) {
+            throw new IllegalArgumentException("Numéro de ligne ou de colonne invalide");
+        } else {
+            int valeur = 0;
+            for (int i = 0; i < listeCoefficients.size(); i++) {
+                if (listeCoefficients.get(i).getLigne() == ligne && listeCoefficients.get(i).getColonne() == colonne) {
+                    valeur = listeCoefficients.get(i).getValeur();
+                }
+            }
+            return valeur;
         }
     }
 
-	public static MatriceCreuse addition(MatriceCreuse mat1, MatriceCreuse mat2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    /**
+     * Méthode pour modifier la valeur d'un coefficient
+     * @param ligne numéro de la ligne du coefficient
+     * @param colonne numéro de la colonne du coefficient
+     * @param valeur valeur du coefficient
+     * @throws IllegalArgumentException si le numéro de ligne ou de colonne est invalide
+     */
+    public void setValeur(int ligne, int colonne, int valeur) throws IllegalArgumentException {
+        if (ligne < 0 || ligne >= nbLignes || colonne < 0 || colonne >= nbColonnes || valeur == 0) {
+            throw new IllegalArgumentException("Un des arguments est invalide");
+        } else {
+            matrice[ligne][colonne] = valeur;
+        }
+    }
 
-	public MatriceCreuse multiplier(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	
-	
-	
+    public int getLigne() {
+        return ligne; // FIXME : c'est n'importe quoi je sais pas ce que je fais
+    }
+
+    public int getColonne() {
+        return colonne;                      
+    }
+
+    public int getNBlignes() {
+        return nbLignes;
+    }
+
+    public int getNBcolonnes() {
+        return nbColonnes;
+    }
 }

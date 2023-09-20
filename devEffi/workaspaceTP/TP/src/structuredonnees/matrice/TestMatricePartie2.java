@@ -1,11 +1,11 @@
 /*
- * Programme de test de la classe MatriceCreuse (matrice creuse)
+ * Programme de test de la classe Matrice (matrice creuse)
  * TestMatricePartie2.java                                              10/20
  */
 package structuredonnees.matrice;
 
 /**
- * Programme de test de la classe MatriceCreuse qui représente une matrice creuse.
+ * Programme de test de la classe Matrice qui représente une matrice creuse.
  * Seules les opérations de la partie 2 du TP sont testées.
  *    - multiplication de la matrice par un coefficient
  *    - addition de 2 matrices
@@ -85,7 +85,7 @@ public class TestMatricePartie2 {
      * @param valeur    valeur des coefficients à insérer dans la matrice
      * @param position  coordonnées des coefficients à insérer dans la matrice
      */
-    private static void initMatrice(MatriceCreuse aInitialiser, double[] valeur,
+    private static void initMatrice(Matrice aInitialiser, double[] valeur,
                                     int[][] position) {        
         for(int i = 0; i < valeur.length; i++) {            
             aInitialiser.setValeur(position[i][0], position[i][1], valeur[i]);            
@@ -97,18 +97,18 @@ public class TestMatricePartie2 {
      * Test de la méthode qui multiplie la matrice par un facteur
      */
     public static void testMultiplier() {
-        MatriceCreuse aTester = null;         // matrice utilisée pour les tests
-        MatriceCreuse resultat = null;        // matrice résultat de la multiplication
+        Matrice aTester = null;         // matrice utilisée pour les tests
+        Matrice resultat = null;        // matrice résultat de la multiplication
         
         System.out.println("Test de la multiplication par un facteur : \n"
                            + "-------------------------------------------\n\n"
                            + "Tests visuels : vérifiez les résultats affichés.\n\n");
         
         /* TEST 1 : on multiplie par 0 */
-        aTester = new MatriceCreuse(DIMENSION_M, DIMENSION_M);        
+        aTester = new Matrice(DIMENSION_M, DIMENSION_M);        
         resultat = aTester.multiplier(0);
         
-        System.out.println("MatriceCreuse nulle multipliée par 0 = ");
+        System.out.println("Matrice nulle multipliée par 0 = ");
         resultat.afficher();
         
         initMatrice(aTester, A_INSERER_M1, COORDONNEES_M1);
@@ -120,7 +120,7 @@ public class TestMatricePartie2 {
         resultat.afficher();
         
         /* TEST 2 : on multiplie par 2 */
-        aTester = new MatriceCreuse(DIMENSION_M, DIMENSION_M);        
+        aTester = new Matrice(DIMENSION_M, DIMENSION_M);        
                
         System.out.println("\nMatrice nulle multipliée par 2 = ");
         resultat = aTester.multiplier(2);
@@ -138,9 +138,9 @@ public class TestMatricePartie2 {
      * Programme de test de l'addition entre 2 matrices
      */
     public static void testAddition() {
-        MatriceCreuse m1, m2;         // 2 matrices qu'il est possible d'additionner
-        MatriceCreuse somme;          // résultat de l'additon de 2 matrices
-        MatriceCreuse a, b;           // matrices de tailles différentes : addition impossible
+        Matrice m1, m2;         // 2 matrices qu'il est possible d'additionner
+        Matrice somme;          // résultat de l'additon de 2 matrices
+        Matrice a, b;           // matrices de tailles différentes : addition impossible
         
         System.out.println("\nTest de l'addition entre 2 matrices : \n"
                            + "---------------------------------------\n");
@@ -150,9 +150,9 @@ public class TestMatricePartie2 {
                            + "      Vous devez vérifier que le message d'erreur" 
                            + "  est affiché correctement.\n");        
         try {
-            a = new MatriceCreuse(LIGNE_A, COLONNE_A);
-            b = new MatriceCreuse(LIGNE_B, COLONNE_B);
-            somme = MatriceCreuse.addition(a, b);
+            a = new Matrice(LIGNE_A, COLONNE_A);
+            b = new Matrice(LIGNE_B, COLONNE_B);
+            somme = Matrice.addition(a, b);
             System.out.println("ERREUR : l'addition a été jugée possible.");
         } catch(IllegalArgumentException erreur) {
             System.out.println(erreur.getMessage());
@@ -160,40 +160,40 @@ public class TestMatricePartie2 {
         
         /* TEST 2 : Addition des matrices M1 et M2 non nulles */
         System.out.println("\n\n   => Test 2 : addition de 2 matrices non nulles :\n");
-        m1 = new MatriceCreuse(DIMENSION_M, DIMENSION_M);
+        m1 = new Matrice(DIMENSION_M, DIMENSION_M);
         initMatrice(m1, A_INSERER_M1, COORDONNEES_M1);
-        m2 = new MatriceCreuse(DIMENSION_M, DIMENSION_M);
+        m2 = new Matrice(DIMENSION_M, DIMENSION_M);
         initMatrice(m2, A_INSERER_M2, COORDONNEES_M2);
         
-        System.out.println("MatriceCreuse M1 = ");
+        System.out.println("Matrice M1 = ");
         m1.afficher();        
         System.out.println("\nMatrice M2 = ");
         m2.afficher();
         
-        somme = MatriceCreuse.addition(m1, m2);
+        somme = Matrice.addition(m1, m2);
         System.out.println("\n\nSomme des 2 matrices = ");
         somme.afficher();
         
-        somme = MatriceCreuse.addition(m1, m1);
+        somme = Matrice.addition(m1, m1);
         System.out.println("\n\nSomme M1 + M1 = ");
         somme.afficher();
                 
         /* TEST 3 : Addition entre M1 et une matrice nulle */
         System.out.println("\n\n   => Test 3 : addition avec une matrice nulle :\n");
-        m2 = new MatriceCreuse(DIMENSION_M, DIMENSION_M);   // m2 = matrice nulle
+        m2 = new Matrice(DIMENSION_M, DIMENSION_M);   // m2 = matrice nulle
         
-        System.out.println("MatriceCreuse M1 = ");
+        System.out.println("Matrice M1 = ");
         m1.afficher();
         
-        somme = MatriceCreuse.addition(m1, m2);
+        somme = Matrice.addition(m1, m2);
         System.out.println("\n\nSomme M1 + matrice nulle = ");
         somme.afficher();
         
-        somme = MatriceCreuse.addition(m2, m1);
+        somme = Matrice.addition(m2, m1);
         System.out.println("\n\nSomme matrice nulle + M1 = ");
         somme.afficher();
         
-        somme = MatriceCreuse.addition(m2, m2);
+        somme = Matrice.addition(m2, m2);
         System.out.println("\n\nSomme matrice nulle + matrice nulle = ");
         somme.afficher();
         
@@ -204,9 +204,9 @@ public class TestMatricePartie2 {
      * Programme de test de la multiplication entre 2 matrices
      */
     public static void testMultiplication() {
-        MatriceCreuse a, b;           // 2 matrices qu'il est possible de multiplier
-        MatriceCreuse produit;        // résultat de la multiplication des 2 matrices
-        MatriceCreuse m1, m2;         // 2 matrices de même taille qui peuvent se multiplier
+        Matrice a, b;           // 2 matrices qu'il est possible de multiplier
+        Matrice produit;        // résultat de la multiplication des 2 matrices
+        Matrice m1, m2;         // 2 matrices de même taille qui peuvent se multiplier
         
         System.out.println("\nTest de la multiplication entre 2 matrices : \n"
                            + "---------------------------------------\n");
@@ -216,9 +216,9 @@ public class TestMatricePartie2 {
                            + "      Vous devez vérifier que le message d'erreur" 
                            + "  est affiché correctement.\n");        
         try {
-            a = new MatriceCreuse(LIGNE_A, COLONNE_A);
-            m1 = new MatriceCreuse(DIMENSION_M, DIMENSION_M);
-            produit = MatriceCreuse.multiplication(a, m1);
+            a = new Matrice(LIGNE_A, COLONNE_A);
+            m1 = new Matrice(DIMENSION_M, DIMENSION_M);
+            produit = Matrice.multiplication(a, m1);
             System.out.println("ERREUR : la multiplication a été jugée possible.");
         } catch(IllegalArgumentException erreur) {
             System.out.println(erreur.getMessage());
@@ -226,50 +226,50 @@ public class TestMatricePartie2 {
         
         /* TEST 2 : Multiplication des matrices A et B non nulles */
         System.out.println("\n\n   => Test 2 : multiplication de 2 matrices non nulles :\n");
-        a = new MatriceCreuse(LIGNE_A, COLONNE_A);
+        a = new Matrice(LIGNE_A, COLONNE_A);
         initMatrice(a, A_INSERER_A, COORDONNEES_A);
-        b = new MatriceCreuse(LIGNE_B, COLONNE_B);
+        b = new Matrice(LIGNE_B, COLONNE_B);
         initMatrice(b, A_INSERER_B, COORDONNEES_B);
         
-        System.out.println("MatriceCreuse A = ");
+        System.out.println("Matrice A = ");
         a.afficher();        
         System.out.println("\nMatrice B = ");
         b.afficher();
         
-        produit = MatriceCreuse.multiplication(a, b);
+        produit = Matrice.multiplication(a, b);
         System.out.println("\n\nMultiplication des 2 matrices = ");
         produit.afficher();
                
                 
         /* TEST 3 : Multiplication entre a et une matrice nulle */
         System.out.println("\n\n   => Test 3 : multiplication avec une matrice nulle :\n");
-        a = new MatriceCreuse(LIGNE_A, COLONNE_A);
+        a = new Matrice(LIGNE_A, COLONNE_A);
         initMatrice(a, A_INSERER_A, COORDONNEES_A);        
-        b = new MatriceCreuse(LIGNE_B, COLONNE_B);
+        b = new Matrice(LIGNE_B, COLONNE_B);
         
-        System.out.println("MatriceCreuse a = ");
+        System.out.println("Matrice a = ");
         a.afficher();
         
-        produit = MatriceCreuse.multiplication(a, b);
+        produit = Matrice.multiplication(a, b);
         System.out.println("\n\nProduit a * matrice nulle = ");
         produit.afficher();
         
         /* TEST 4 : Multiplication des matrices A et B non nulles */
         System.out.println("\n\n   => Test 4 : multiplication de 2 matrices non nulles :\n");
-        a = new MatriceCreuse(LIGNE_A, COLONNE_A);
+        a = new Matrice(LIGNE_A, COLONNE_A);
         initMatrice(a, A_INSERER_A, COORDONNEES_A);
         a.setValeur(1, 4, -8);
         a.setValeur(3, 1, 3);
-        b = new MatriceCreuse(LIGNE_B, COLONNE_B);
+        b = new Matrice(LIGNE_B, COLONNE_B);
         initMatrice(b, A_INSERER_B, COORDONNEES_B);
         b.setValeur(4, 2, 2);
         
-        System.out.println("MatriceCreuse A = ");
+        System.out.println("Matrice A = ");
         a.afficher();        
         System.out.println("\nMatrice B = ");
         b.afficher();
         
-        produit = MatriceCreuse.multiplication(a, b);
+        produit = Matrice.multiplication(a, b);
         System.out.println("\n\nMultiplication des 2 matrices = ");
         produit.afficher();                
     }
@@ -283,8 +283,8 @@ public class TestMatricePartie2 {
      */
     public static void testAdditionComplementaire() {
         try {
-            MatriceCreuse mat1 = new MatriceCreuse(50,50);
-            MatriceCreuse mat2 = new MatriceCreuse(50,50);
+            Matrice mat1 = new Matrice(50,50);
+            Matrice mat2 = new Matrice(50,50);
             
             // préparation de mat1
             mat1.setValeur(1, 2, 5); 
@@ -316,7 +316,7 @@ public class TestMatricePartie2 {
             System.out.println("\n\nMatrice mat2 = ");
             mat2.afficher();
             
-            MatriceCreuse addition = MatriceCreuse.addition(mat1, mat2);
+            Matrice addition = Matrice.addition(mat1, mat2);
             System.out.println("\n\nMatrice addition = ");
             addition.afficher();
         } catch (IllegalArgumentException erreur) {
@@ -333,8 +333,8 @@ public class TestMatricePartie2 {
      */
     private static void testProduitComplementaire() {
         try {
-            MatriceCreuse a = new MatriceCreuse(4, 4);
-            MatriceCreuse b = new MatriceCreuse(4, 3);
+            Matrice a = new Matrice(4, 4);
+            Matrice b = new Matrice(4, 3);
             
             // préparation de mat1
             a.setValeur(1, 1, 2);
@@ -362,7 +362,7 @@ public class TestMatricePartie2 {
             System.out.println("\nMatrice B = ");
             b.afficher();
             
-            MatriceCreuse resultat = MatriceCreuse.multiplication(a, b);
+            Matrice resultat = Matrice.multiplication(a, b);
             System.out.println("\nRésultat = ");
             resultat.afficher();
         } catch(IllegalArgumentException erreur) {

@@ -1,3 +1,5 @@
+package qd_tp3;
+
 
 public class Enseignant extends Utilisateur {
     
@@ -7,8 +9,8 @@ public class Enseignant extends Utilisateur {
     super(nom, prenom, identifiant, motDePasse);
   }
 
-    public void setMatieresEnseignees(Matiere... matieresEnseignees) {
-        this.matieresEnseignees = matieresEnseignees;
-    }
+  void setMatieresEnseignees(Matiere... matieres) {
+    this.matieresEnseignees = matieres;
+  }
 
 }
