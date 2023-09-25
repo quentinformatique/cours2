@@ -56,8 +56,6 @@ obligation du bureau:
 
 l'affnic peut résilier sont contrat si elle se prévaut d'une clause résolutoire. (mais un manquement grave du contrat n'est pas détaillé...ainsi cela dépend d'un choix fais par un juge)
 
-
-
 ### sujet 2
 
 pas de contrôle préalables(sauf pour certains termes: crimes, libertées, organismes internationnaux, organismes internet, pays, profession reglementées, protocoles internet, santé, structures, valeurs, gTLD, état)
@@ -68,13 +66,9 @@ un tier peut faire un demande de contrôle, il doit justifier ses interets (usur
 
 pour obtenir un nom de domaine, il faut s'aquiter d'un forfait a l'année (renouvellment possible, si non fait, il redevient libre), il faut informer le bureau d'enregistrement si nos informations change.
 
+## II- Les marques
 
-
-
-
-# les marques
-
-L7 11-1 à L717-2       R.711-1 à R.718          INPI
+(régie par la proprieté intelectuelle)   L7 11-1 à L717-2       R.711-1 à R.718          INPI
 
 signe distinctif :
 
@@ -92,6 +86,40 @@ marque --> droit d'exploitation, exclusif, titulaire ? exploitation
 
 
 
+**sujet 1** la marque est un signe distinctif:
+
+- qu'est ce qu'un signe, quelle forme peut on retenir (est ce que un son peu etre un marque ?) 
+
+- il doit estre distinctif (ça veut dire quoi ?) 
+
+- il doit etre disponible (sa veut dire quoi ? comment on verifie ?) quelle difference par rapport a un nom de domaine ?
+
+- il doit etre licite
+
+- est ce qu'il y a un controle 
 
 
 
+**sujet 2** titre de ppté intelectuelle
+
+- comment on fais la demande (INPI)  :
+  
+  - publication ?
+  
+  - contestion (devant qui se fait elle, comment se fait elle, quelles formulaires ?)
+  
+  - enregistrement de la demande
+  
+  - publication de la marque (trouver ou c'est fait et montrer un exemple)
+
+- Etendu de la protection ? :
+  
+  - géographique
+  
+  - durée 
+  
+  - renouvellement ?
+  
+  - que faire pur augmenter son étendue (internationnal etc..)
+  
+  - quelle limitation (produits similaires )
