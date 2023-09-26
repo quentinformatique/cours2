@@ -8,13 +8,13 @@
  * ----------------------------------------------------------------------------
  */
 
-/* Programme de test de la classe Matrice (matrice creuse)                09/22
+/* Programme de test de la classe MatriceCreuse (matrice creuse)                09/22
  * TestMatricePartie1.java
  */
 package structuredonnees.matrice;
 
 /**
- * Programme de test de la classe Matrice qui représente une matrice creuse.
+ * Programme de test de la classe MatriceCreuse qui représente une matrice creuse.
  * Seules les opérations de la partie 1 du TP sont testées.
  *    - le constructeur avec argument
  *    - la modification d'un coefficient de la matrice
@@ -50,7 +50,7 @@ public class TestMatricePartie1 {
         int[][] dimIncorrecte = { {0, 0}, {0, -6}, {-6, -7}, {-6, 0},
                                   {5, 0}, {5, -6}, {0, 10}, {-4, 15} };
         int[][] dimCorrecte = { {2, 2}, {10, 15}, {15, 4}};
-        Matrice aCreer = null;      // matrice à créer
+        MatriceCreuse aCreer = null;      // matrice à créer
         int nbTestOk;               // nombre de tests réussis
         
         System.out.println("Test du constructeur avec argument : \n"
@@ -66,7 +66,7 @@ public class TestMatricePartie1 {
                     + dimIncorrecte[i][0] + " * " 
                     + dimIncorrecte[i][1] + " : ");            
             try {
-                aCreer = new Matrice(dimIncorrecte[i][0], dimIncorrecte[i][1]);
+                aCreer = new MatriceCreuse(dimIncorrecte[i][0], dimIncorrecte[i][1]);
                 System.out.println("ERREUR : construction effectuée bien que "
                                    + "la dimension soit incorrecte");
             } catch (IllegalArgumentException erreur) {
@@ -87,7 +87,7 @@ public class TestMatricePartie1 {
                                + dimCorrecte[i][0] + " * " 
                                + dimCorrecte[i][1] + " : ");
             try {
-                aCreer = new Matrice(dimCorrecte[i][0], dimCorrecte[i][1]);
+                aCreer = new MatriceCreuse(dimCorrecte[i][0], dimCorrecte[i][1]);
                 System.out.println("  =>  Construction effectuée."); 
                 nbTestOk++;
             } catch (IllegalArgumentException erreur) {
@@ -107,13 +107,13 @@ public class TestMatricePartie1 {
      * situations simples.
      */
     public static void testAfficherSetValeur() {        
-        Matrice aTester = null;         // matrice utilisée pour les tests
+        MatriceCreuse aTester = null;         // matrice utilisée pour les tests
          
         System.out.println("Test de l'affichage des coefficients : \n"
                            + "------------------------------------\n");
         
         // test avec une matrice nulle
-        aTester = new Matrice(DIMENSION, DIMENSION);
+        aTester = new MatriceCreuse(DIMENSION, DIMENSION);
         System.out.println("Résultat affichage d'une matrice nulle. \n"
         		           + "  => ");
         aTester.afficher();
@@ -137,7 +137,7 @@ public class TestMatricePartie1 {
      * Test de la méthode getValeur avec une matrice nulle
      * @param aTester matrice qui sera créée par la méthode 
      */
-    private static void testGetValeurMatriceNulle(Matrice aTester) {
+    private static void testGetValeurMatriceNulle(MatriceCreuse aTester) {
         int nbTestOk;                   // nombre de tests réussis
         System.out.println("TEST 1 : avec une matrice nulle.\n");
         nbTestOk = 0;
@@ -166,7 +166,7 @@ public class TestMatricePartie1 {
      * Test de la méthode getValeur avec une matrice non nulle
      * @param aTester  matrice sur laquelle portent les tests
      */
-    private static void testGetValeurMatriceNonNulle(Matrice aTester) {
+    private static void testGetValeurMatriceNonNulle(MatriceCreuse aTester) {
         int nbTestOk;                   // nombre de tests réussis
         int position;                   // position d'une paire dans COORDONNEES
         double valeurCourante;          // valeur d'un coefficient de la matrice
@@ -217,7 +217,7 @@ public class TestMatricePartie1 {
      * Test de la méthode getValeur avec des coordonnées incorrectes
      * @param aTester  matrice sur laquelle portent les tests
      */
-    private static void testGetValeurCoordonneeIncorrecte(Matrice aTester) {        
+    private static void testGetValeurCoordonneeIncorrecte(MatriceCreuse aTester) {        
         int nbTestOk;                   // nombre de tests réussis
         double valeurCourante;          // valeur d'un coefficient de la matrice
         
@@ -257,7 +257,7 @@ public class TestMatricePartie1 {
      * Test de la méthode getValeur
      */
     public static void testGetValeur() {
-        Matrice aTester = null;         // matrice utilisée pour les tests
+        MatriceCreuse aTester = null;         // matrice utilisée pour les tests
        
         System.out.println("Test de l'accesseur getValeur : \n"
                            + "------------------------------\n");
@@ -266,7 +266,7 @@ public class TestMatricePartie1 {
          *  TEST 1 : on vérifie que tous les coefficients d'une matrice nulle
          *  sont égaux à 0 
          */
-        aTester = new Matrice(DIMENSION, DIMENSION);
+        aTester = new MatriceCreuse(DIMENSION, DIMENSION);
         testGetValeurMatriceNulle(aTester);
         
         /*
@@ -285,7 +285,7 @@ public class TestMatricePartie1 {
      * Test de la méthode setValeur en utilisant des coordonnées incorrectes
      * @param aTester  matrice à tester
      */
-    private static void testSetValeurCoordonneeIncorrecte(Matrice aTester) {
+    private static void testSetValeurCoordonneeIncorrecte(MatriceCreuse aTester) {
         
         // jeu de données avec des coordonnées incorrectes
         int[][] coordIncorrecte = { {0, 0}, {0, -6}, {-6, -7}, {-6, 0},
@@ -327,7 +327,7 @@ public class TestMatricePartie1 {
      * Test de la méthode setValeur en utilisant des coordonnées correctes
      * @param aTester  matrice à tester
      */
-    private static void testSetValeurCoordonneeCorrecte(Matrice aTester) {
+    private static void testSetValeurCoordonneeCorrecte(MatriceCreuse aTester) {
         
         // jeu de données avec les coordonnées des coefficients à modifier
         int[][] coordAModifier = { {5, 4}, {2, 2}, {1, 2} };
@@ -337,7 +337,7 @@ public class TestMatricePartie1 {
          
         System.out.println("TEST 2 : avec des coordonnées correctes.\n"
                 + "Vous devez vérifier que l'affichage est correct.\n"
-                + "Matrice intiale : ");
+                + "MatriceCreuse intiale : ");
         aTester.afficher();  
         
         // on modifie  des valeurs de la matrice avec des valeurs non nulles
@@ -366,11 +366,11 @@ public class TestMatricePartie1 {
      * Test de la méthode setValeur
      */
     public static void testSetValeur() {
-        Matrice aTester;                // matrice à tester
+        MatriceCreuse aTester;                // matrice à tester
            
         System.out.println("Test opération de modification d'un coefficient : \n"
                            + "--------------------------------------------------\n");
-        aTester = new Matrice(DIMENSION, DIMENSION);
+        aTester = new MatriceCreuse(DIMENSION, DIMENSION);
         initMatriceCarre(aTester);
         
         // tests avec des coordonnées incorrectes
@@ -407,7 +407,7 @@ public class TestMatricePartie1 {
      * @param aInitiliaser  matrice à initialiser (elle doit déjà être
      *                      créée à l'appel de la méthode)
      */
-    private static void initMatriceCarre(Matrice aInitialiser) {        
+    private static void initMatriceCarre(MatriceCreuse aInitialiser) {        
         for(int i = 0; i < A_INSERER.length; i++) {            
             aInitialiser.setValeur(COORDONNEES[i][0], COORDONNEES[i][1], A_INSERER[i]);            
         }
