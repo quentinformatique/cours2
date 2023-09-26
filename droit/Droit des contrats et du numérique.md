@@ -88,15 +88,15 @@ marque --> droit d'exploitation, exclusif, titulaire ? exploitation
 
 **sujet 1** la marque est un signe distinctif:
 
-- qu'est ce qu'un signe, quelle forme peut on retenir (est ce que un son peu etre un marque ?) 
+- qu'est ce qu'un signe, quelle forme peut on retenir (est ce qu' un son peut être un marque ?)  
 
-- il doit estre distinctif (ça veut dire quoi ?) 
+- il doit être distinctif (ça veut dire quoi ?)  
 
-- il doit etre disponible (sa veut dire quoi ? comment on verifie ?) quelle difference par rapport a un nom de domaine ?
+- il doit être disponible (ça veut dire quoi ? comment on vérifie ?) Quelle différence par rapport à un nom de domaine ?  
 
-- il doit etre licite
+- il doit être licite  
 
-- est ce qu'il y a un controle 
+- est ce qu'il y a un contrôle  
 
 
 
@@ -123,3 +123,25 @@ marque --> droit d'exploitation, exclusif, titulaire ? exploitation
   - que faire pur augmenter son étendue (internationnal etc..)
   
   - quelle limitation (produits similaires )
+
+**sujet 3**
+
+- droit d'exploitation
+  
+  - titulaire
+  
+  - peut il changer et que ce passe-t-il 
+  
+  - qu'est ce qu'il se passe si la pers qui procede a l'enregistrement meurt
+
+- droit exclusif 
+  
+  - proprietaire
+  
+  - exeption
+
+- exploitation
+  
+  - est elle nécessaire ?
+  
+  - peut-t-on le louer via une liscence ?
