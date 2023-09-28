@@ -1,0 +1,12 @@
+DELIMITER //
+DROP function IF EXISTS facture //
+CREATE function facture() RETURNS VARCHAR
+BEGIN
+    DECLARE dateActuelle DATE;
+    DECLARE anneeMois VARCHAR;
+    SET dateActuelle = CURDATE();
+    SET anneeMois = SUBSTRING(dateActuelle, 1, 4);
+    RETURN anneeMois;
+END; //
+
+SELECT facture()//
