@@ -10,3 +10,5 @@ BEGIN
 END; //
 
 SELECT facture()//
+
+le num de la facture est le num max de la facture du mois actel
