@@ -25,9 +25,6 @@ public class Noeud<E extends Comparable<E>> {
 		return false;
 	}
 	
-	public boolean inserer(E valeur) {
 
-		return true; // en travaux
-	}
 
 }
