@@ -64,6 +64,34 @@
     ?>
     <h1>Etape 5</h1>
     <hr>
+    <?php
+        echo "<table>";
+        # boucle pour les lignes
+        for ($i=0; $i < 10; $i++) { 
+            echo "<tr>";
+            # boucle pour les colonnes
+            for ($j=0; $j < 10; $j++) {
+                if ($i == 0 && $j == 0) {
+                # en (0 ; 0) on affiche X
+                    echo '<td class>X</td>';
+                } else if ($i == 0) { 
+                    # sur la premiere ligne on affiche les numéro de colonnes avec le style 
+                    echo '<td class="case">'.$j.'</td>';
+                } else if ($j == 0) {
+                    # sur la premiere colonne on affiche les numéro de ligne avec le style 
+                    echo '<td class="case">'.$i.'</td>';
+                } else if ($i == $j || $i == 0 || $j == 0  ) {
+                    # si c'est un diagonnale on affiche la case avec le style
+                    echo '<td class="case">'.$i*$j.'</td>';
+                } else {
+                    # sinon on affiche la multiplication de i par j
+                    echo "<td>".$i*$j."</td>";
+                }
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    ?>
 
 
 </body>

@@ -1,3 +1,17 @@
 .red {
     color: red;
 }
+
+td {
+    font-size: 20px;
+    width: 30px;
+    border-style: double;
+    border-color: black;
+    text-align: center;
+}
+
+.case {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: grey;
+}
