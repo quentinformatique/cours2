@@ -1,9 +1,9 @@
 [class*="col-"] {
-  background-color: #CBC9C9; 	/* couleur arrière plan */
-  border: 2px solid black;		/* Bordures  */
-  border-radius: 6px;			/* Arrondi cadres */
-  line-height: 70px;			/* hauteur des lignes */	
-  text-align: center;			/* Centrage horizontal */
+    background-color: #CBC9C9; 	/* couleur arrière plan */
+    border: 2px solid black;		/* Bordures  */
+    border-radius: 6px;			/* Arrondi cadres */
+    line-height: 70px;			/* hauteur des lignes */
+    text-align: center;			/* Centrage horizontal */
 }
 
 .erreur{ 			/* Classe pour mise en couleur rouge des zones dont les données n'ont pas été envoyées */
@@ -13,9 +13,6 @@
 .ok{				/* Classe pour mise en couleur verte des zones dont les données ont été envoyées */
 	color: green; 	/* couleur de la police verte */
 }
-
-
-
 
 
 
