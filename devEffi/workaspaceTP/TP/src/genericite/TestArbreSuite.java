@@ -56,7 +56,6 @@ public class TestArbreSuite {
         System.out.println("  Resultat du parcours prefixe : " + arbreVide.parcoursPrefixe());
         System.out.println("  Resultat du parcours infixe : " + arbreVide.parcoursInfixe());
         System.out.println("  Resultat du parcours postfixe : " + arbreVide.parcoursPostfixe());
-        
     }
     
     
@@ -205,7 +204,7 @@ public class TestArbreSuite {
      * @param args argument non utilisé
      */
     public static void main(String[] args) {
-       // test3Parcours();
+       test3Parcours();
        // testHauteur();
        // testEstSurUneFeuille();
        // testPlusGrandElement();
