@@ -50,7 +50,7 @@ graph TD;
     Systeme-->sorties;
 ```
 
-Toute organisation est pilotée par une direction, elle a poiur mission de conduire l'organisation vers des objectifs. Cela nécessite souvent des décisions, un controle continu du fonctionnement du systeme opérant. Et D'eventuelles modifications a aporter.
+Toute organisation est pilotée par une direction, elle a poiur mission de conduire l'organisation vers des objectifs. Cela nécessite souvent des décisions, un controle continu du fonctionnement du systeme opérant. Et D'eventuelles modifications a aporter. 
 
 Parallèlement aux flux physique, il y a un flux de décision; Ce flux correspond aux décisions prises par la direction de l'organisation pour que celle-ci fonctionne dans les meilleures conditions et puisse atteindre ses objectifs. Enfin, toute organisation est soumise à des contraintes ectérieures et intérieures qui conraingnent son action et l'empeche dévoluer librement
 
