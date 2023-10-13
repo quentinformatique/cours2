@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihms.IhmEnseignantController">
+   <children>
+      <Label layoutX="28.0" layoutY="59.0" text="Matiere" />
+      <Label layoutX="26.0" layoutY="117.0" text="Etudiant" />
+      <Label layoutX="148.0" layoutY="19.0" style="-fx-font-weight: bold;" text="Session Enseignant" />
+      <ComboBox fx:id="comboMatiere" layoutX="105.0" layoutY="53.0" onAction="#comboMatiereAction" prefWidth="150.0" promptText="Choisir une matière" />
+      <ComboBox fx:id="comboEtudiant" layoutX="105.0" layoutY="111.0" onAction="#comboEtudiantAction" prefWidth="150.0" promptText="Choisir un étudiant" />
+      <Button fx:id="btnModifierNote" layoutX="278.0" layoutY="52.0" mnemonicParsing="false" onAction="#btnModifierNoteAction" prefHeight="39.0" prefWidth="133.0" text="Modifier note" />
+      <Button fx:id="btnQuitter" layoutX="278.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnQuitter" prefHeight="39.0" prefWidth="133.0" text="Quitter" />
+      <Label layoutX="28.0" layoutY="173.0" text="Note" />
+      <TextField fx:id="txtNote" layoutX="105.0" layoutY="167.0" prefHeight="39.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

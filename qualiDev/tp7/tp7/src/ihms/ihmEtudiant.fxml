@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="207.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihms.IhmEtudiantController">
+   <children>
+      <Label layoutX="94.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Session Etudiant" />
+      <Label fx:id="labelNotes" layoutX="25.0" layoutY="41.0" text="Notes" />
+      <TextArea fx:id="txtNotes" layoutX="25.0" layoutY="79.0" prefHeight="64.0" prefWidth="273.0" />
+      <Button fx:id="btnQuitter" layoutX="125.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnQuitterAction" text="Quitter" />
+   </children>
+</AnchorPane>

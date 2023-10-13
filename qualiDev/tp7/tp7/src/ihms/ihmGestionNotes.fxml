@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="454.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihms.IhmGestionNotesController">
+  <children>
+    <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="149.0" layoutY="20.0" style="-fx-font-weight: bold; -fx-font-size: 18;" text="Gestion de notes" />
+      <Label layoutX="22.0" layoutY="73.0" text="Identifiant" />
+      <Label layoutX="22.0" layoutY="113.0" text="Mot de passe" />
+      <TextField fx:id="txtIdentifiant" layoutX="143.0" layoutY="67.0" prefHeight="39.0" prefWidth="142.0" />
+      <TextField fx:id="txtMotDePasse" layoutX="143.0" layoutY="114.0" prefHeight="39.0" prefWidth="142.0" />
+      <Button fx:id="btnSeConnecter" layoutX="313.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnSeConnecterAction" prefHeight="39.0" prefWidth="127.0" text="Se connecter" />
+      <Button fx:id="btnQuitter" layoutX="313.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnQuitterAction" prefHeight="39.0" prefWidth="127.0" text="Quitter" />
+  </children>
+</AnchorPane>
