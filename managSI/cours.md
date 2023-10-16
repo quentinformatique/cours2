@@ -77,3 +77,78 @@ Pour le systeme de pilotage:
 - information concerner une grande partie de l'organisation(exemple valeur du stock actuel)
 
 - informations souvent tournée vers le passé ou vers le futur(exemple comparaison des chiffres d'affaires des années, prévisions, ...)
+
+## Gestion de projet
+
+### Le concept de gestion de projet
+
+```mermaid
+graph LR
+    A(Entreprises, organisations) --> B(Travaux)
+    B --> A
+    B --> C(Opérations permanentes)
+    B --> D(Projets temporaires)
+```
+
+Les 3 points qui caractérisent un projet
+
+- Le projet est temporaire( début, fin, délai)
+
+- il se réalise en étapese
+
+- On a un objectif, le(s) livrable(s) (permet de mesurer le succs du projet)
+
+Un projet est un processus unique qui consiste en un ensemble d'activités coordonnées et maitrisés comportant des dates de début et de fin, entrepris dans le but d'atteindre un objectif conforme a des exigences spécifiques telles que des contraintes de délais, de coûts et de ressources.
+
+
+
+```mermaid
+graph LR
+    A(périmetre) --> B(Délais)
+    B --> C(Coûts)
+    C --> A
+```
+
+- repecter les délais
+
+- Maitriser les coûts
+
+- Respecter la qualité/le périmetre
+
+
+
+Processus de surveillance et de maitrise : 
+
+
+
+```mermaid
+graph 
+A(Processus de démarrage) --> B(processus de planification)
+B --> C(Processus d'éxécution)
+C --> B
+C --> D(processus de cloture)
+```
+
+Exemple de processus de projet informatique
+
+```mermaid
+graph LR
+
+A(Définition de projet) --> B(Conception)
+
+B --> C(Réalisation systeme cible)
+
+B --> D(Réalisations diverses)
+
+C --> E(Tests fonctionnels ou d'intégration)
+
+D --> E
+
+E --> F(Tests de pré-production ou en environnement de production)
+
+F --> G(Fonctionnement réel)
+
+H(Formation) --> G
+
+I(Organisation, documentation procédures) --> H
+```
