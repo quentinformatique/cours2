@@ -1,0 +1,42 @@
+/* Import police google */
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+body{
+	color:#585976;		/* Couleur de la police Gris foncé */
+}
+
+
+/* Utilisation d'une police Google */
+* { 
+	font-family: 'Righteous' ;
+	/*text-shadow: 4px 4px 4px #aaa;*/
+}
+
+.cadre{
+	text-align:center;
+	background-color: #D0CDFD;	/* Couleur de fond */
+	border-style:double ; 		/* Bordure double */
+	border-width:5px;			/* Epaisseur bordure */
+	border-color:#585976;		/* Couleur de la bordure */
+	border-radius: 5px;			/* Arrondissement des angles */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
