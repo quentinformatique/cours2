@@ -1,0 +1,14 @@
+Définition de fini :
+
+items de backlog:
+- tous les test passent, couverture de test suffisante
+- le code est commenté et propre
+- cela rempli a 100% la fonctionnalitée décrite par l'user storie
+- le PO valide 
+
+
+increment: 
+- toute les features sont traitées
+- tous les documents demandés sont fais
+- le client valide
+- l'application est fonctionnelle
