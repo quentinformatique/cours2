@@ -30,8 +30,10 @@
 hs_err_pid*
 replay_pid*
 
+#ideas
+.idea
+
 #folders
-SAE/
 gitServieres/
 bootstrap-4.5.2-dist/
 bootstrap/
@@ -54,7 +56,6 @@ __pycache__/
 /qualiDev/tp5/tp5/dist/
 /qualiDev/tp5/tp5/build/
 /qualiDev/tp6/tp6/nbproject/private/
-/SAE/
 /qualiDev/tp7/JavaFXApplication4/nbproject/private/
 /qualiDev/tp7/tp7/nbproject/private/
 /qualiDev/tp7/tp7/build/
