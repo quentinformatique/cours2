@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
 body{
-	color:#585976;		/* Couleur de la police Gris foncé */
+	color:#585976;		/* Couleur de la police Gris foncï¿½ */
 	background: linear-gradient(#8EB3C8, white);
 	font-family: 'Righteous', cursive; /* Utilisation de la police Righteous */
 }
@@ -12,13 +12,13 @@ body{
 	border-width:3px;		/* Epaisseur bordure */
 	border-color:#1B4B67;	/* Couleur de la bordure */
 	border-radius: 5px;		/* Arrondissement des angles */
-	padding:5px;			/* Marge intérieure */
+	padding:5px;			/* Marge intï¿½rieure */
 	min-height:200px;		/* Hauteur minimale d'une boite */
-	margin:2px; 			/* Marge à l'extérieur */
+	margin:2px; 			/* Marge ï¿½ l'extï¿½rieur */
 }
 
 .enGras{
-	font-weight: bold;		/* Ecriture en gras pour les intitulés des vignettes */
+	font-weight: bold;		/* Ecriture en gras pour les intitulï¿½s des vignettes */
 }
 
 table {
@@ -26,13 +26,25 @@ table {
 }
 
 td {
-	padding:4px;			/* Marge intérieure pour les cellules du tableau */
+	padding:4px;			/* Marge intï¿½rieure pour les cellules du tableau */
+	text-align: center;
+	/* affichage des bordures des cellules */
+	border-style:solid ; 	/* Bordure double */
+	border-width:1px;		/* Epaisseur bordure */
+	border-color:#1B4B67;	/* Couleur de la bordure */
 }
 
 th {
-	text-align:center;		/* Alignement texte centré dans les entetes des tables */
+	padding:4px;			/* Marge intï¿½rieure pour les cellules du tableau *//* affichage des bordures des cellules */
+	border-style:solid ; 	/* Bordure double */
+	border-width:1px;		/* Epaisseur bordure */
+	border-color:#1B4B67;	/* Couleur de la bordure */
+	text-align: center !important;
 }
 
+.blanc {
+	background-color: white;
+}
 
 
 
