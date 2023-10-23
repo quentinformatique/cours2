@@ -1,0 +1,79 @@
+<html lang="fr">
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Les feuilles de styles -->
+    <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/fa/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <!-- Le favicon -->
+    <link rel="icon" type="image/png" href="./images/bankIcon.png"/>
+    <title>Accueil</title>
+</head>
+<body class="gradientBackground">
+<div class="container">
+    <!-- Premier bloc -->
+    <div class="row bgBlue frame">
+        <div class="col-12 col-md-3">
+            <img src="./images/Logo.jpg" class="logo img-fluid">
+        </div>
+        <!-- div vide pour séparer le boutton et le logo -->
+        <div class="col-md-2">
+        </div>
+        <!---->
+        <div class="col-12 col-md-6">
+            <h1 class="title">
+                Ma Banque en ligne
+            </h1>
+            <h1>
+                IUT BANK ONLINE
+            </h1>
+        </div>
+    </div>
+    <!-- Deuxième bloc -->
+    <div class="row gradientBackground frame">
+        <div class="col-12">
+            <h1>-- Bienvenue sur le site de IUT BANK --</h1>
+            <h2>Vous pourrez grâce à cette interface voir le détail de vos comptes et faire toutes vos opérations à distance.</h2>
+        </div>
+    </div>
+    <!-- Troisième bloc -->
+    <div class="row gradientBackground frame">
+        <div class="col-12 col-md-6">
+            <h4>Identifiant :</h4>
+            <div class="input-group">
+                <input class="form-control" type="number" placeholder="Tapez votre numéro de compte">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Mot de passe :</h4>
+            <div class="input-group">
+                <input class="form-control" type="password" placeholder="Tapez votre mot de passe">
+            </div>
+        </div>
+        <div class="col-12">
+            <button onclick="window.location.href='./Pages/comptes.php';" type="button" class="btn btn-primary btn-md btn-block">
+                Me connecter <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Quatrième bloc -->
+    <div class="row gradientBackground frame">
+        <div class="col-3 contactus">
+            <button onclick="window.location.href='./Pages/contact.php';" type="button" class="btn btn-primary btn-md btn-block">
+                Nous contacter <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+            </button>
+        </div>
+        <!-- div vide pour séparer le boutton et le logo -->
+        <div class="col-6">
+        </div>
+        <!---->
+        <div class="col-3">
+            <h3 class="text-dark">Réalisé par</h3>
+            <img src="./images/LogoIut.png" class="logoiut img-fluid">
+        </div>
+    </div>
+</div>
+</body>
+</html>

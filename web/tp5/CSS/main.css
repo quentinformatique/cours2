@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* Gestion de la police générale et sa couleur et son alignement */
+* {
+    color: #3900EC;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+}
+/* Gestion des espacement entres les blocs */
+.frame {
+    margin: 2px;
+    padding: 5px;
+}
+/* Gestion des titres (Ma banque en ligne,Bienvenue sur IUT BANK...) */
+h1 {
+    font-size: 2em; 
+    font-weight: bold;
+}
+/* Gestion des titres h2 (Vous pouvez grace...,Réalisé par...) */
+h2 {
+    font-size: 1.8em; 
+    font-weight: bold;
+}
+/* Gestion des titres h4 (Identifiant, mot de passe) */
+h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Style spécial pour quelques textes pas en bold */
+.notbold {
+    font-weight: normal;
+}
+
+/* Style spécial pour quelques textes ni en bold ni en taille augmentée */
+.normaltxt {
+    padding-top: 5px;
+    font-weight: normal;
+    color: black;
+}
+
+/* Pour le texte des comptes */
+.comptetxt {
+    padding-top: 30px; 
+}
+
+/* Gestion des inputs */
+input, textarea {
+    text-align: left;
+}
+
+.submit {
+    text-align: center;
+    height: 40px;
+}
+/* Style pour le tableau des comptes */
+table, td, th {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+/* Section pour l'argent des comptes */
+.money {
+    padding-top: 30px;
+    color: green;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.contactus {
+    padding-top: 55px;
+}
+/* fin de la section pour l'argent des comptes */
+
+/* Gestion des couleurs et dégradés en arrière plan des pages */
+.gradientBackground {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #00B3EC 100%);
+}
+
+.bgBlue {
+    background: rgba(0,179,237,255)
+}
+/* Fin de la gestion des arrières plans */
+
+/*  Gestion des images */
+img:hover {
+    transform: scale(1.2);
+}
+.logo {
+    padding: 5px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.logoiut {
+    max-height: 100px;
+}
+
+@media screen and (max-width: 540px) {
+    .account {
+        display: none;
+    }
+}
+/* Fin gestion images */
