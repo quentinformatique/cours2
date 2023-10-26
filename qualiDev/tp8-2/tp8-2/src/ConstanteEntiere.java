@@ -1,17 +1,17 @@
 public class ConstanteEntiere implements Expression {
     
     private int valeur;
-
     
     public ConstanteEntiere(int valeur) {
+        this.valeur = valeur;
     }
 
     /**
-     * - evaluer() : Renvoie valeur.
+     * Renvoie la valeur de l'attribut valeur.
      */
     
     public int evaluer() {
-        return 0; // STUB
+        return valeur;
     }
 
 }
