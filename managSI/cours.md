@@ -100,8 +100,6 @@ Les 3 points qui caractérisent un projet
 
 Un projet est un processus unique qui consiste en un ensemble d'activités coordonnées et maitrisés comportant des dates de début et de fin, entrepris dans le but d'atteindre un objectif conforme a des exigences spécifiques telles que des contraintes de délais, de coûts et de ressources.
 
-
-
 ```mermaid
 graph LR
     A(périmetre) --> B(Délais)
@@ -115,11 +113,7 @@ graph LR
 
 - Respecter la qualité/le périmetre
 
-
-
 Processus de surveillance et de maitrise : 
-
-
 
 ```mermaid
 graph 
@@ -152,3 +146,79 @@ H(Formation) --> G
 
 I(Organisation, documentation procédures) --> H
 ```
+
+### Énonce du projet
+
+Définition du projet, de ce qui doit être accompli.
+
+- Document référence d’engagement de résultat.
+
+- Puis, éventuellement, cahier des charges, appel d’offre, et contrat.
+
+Comprend les éléments suivants :
+
+- Objectifs du projet et du produit issu du projet.
+
+- Description du produit issu du projet (exigences et caractéristiques, description des produits ou services que le projet doit fournir)
+
+- Limites et hypothèses du projet, les exclusions du projet.
+
+- Critères d’acceptation du produit.
+
+- Livrables du projet.
+
+- Contraintes du projet :
+  
+  - Coûts
+  
+  - Délais
+  
+  - Indicateurs de qualité
+  
+  - Normes
+
+### Processus de vérification
+
+```mermaid
+graph 
+  A(Début du projet) --> B{{objectif}}
+  B --> C(Livrables / Contraintes / Criteres et conditions d'acceptation)
+  C --> D[A-t-on atteint l'objectif]
+  D --> E(état des livrables / respect des contraintes / coonditions d'acceptations)
+  E --> F{{Vérification}}
+  F --> G(Fin du projet)
+```
+
+### Processus d'obtention de l'écheancier
+
+1) Rescecement des livrables (PBS)
+
+2) Identification des taches(ou activitées WBS)
+
+3) Estimation des durées des taches
+
+4) EStimation des ressources et du cout (RBS - CBS)
+
+5) Ordonnancement (PERT - MPM)
+
+6) Echeancier du projet (GANTT)
+
+### Livrables
+
+1. Livrables demandés par le commanditaire ou maitre d'ouvrage
+
+2. Livrables exigés par nos méthode de travail
+
+3. Livrables nécessaires au processus de production
+
+### PBS - Product Breakdown Structure ou organigramme des livrables
+
+Le PBS est une décomposition du projet par livrable. Cette structure aboutit au lot de travaux. A chaque éléments est attribué un responsable, avec les taches et les objectifs correspondants. le PBS permet donc le découpage du projet.
+
+### WBS - Work Breakdown Structure ou liste des taches a acomplir
+
+Il sagit d'identifier toutes les taches nécessaires à la réalisation du produit et a la conduite du projet. Il est construit a partir du PBS, il faut identifier toutes les taches de chaqeu livrables. Le WBS est le travail a accomplir pour réaliser votre planning de Gantt qui serat un outil essentiel dans votrz suivi des taches.
+
+### RBS - Ressources Breakdown Structure
+
+liste des ressources qui vont intervenir sur le projet. Ressources "classiques", autres intervenant
