@@ -221,4 +221,6 @@ Il sagit d'identifier toutes les taches nécessaires à la réalisation du produ
 
 ### RBS - Ressources Breakdown Structure
 
-liste des ressources qui vont intervenir sur le projet. Ressources "classiques", autres intervenant
+liste des ressources qui vont intervenir sur le projet. Ressources "classiques", autres intervenant    
+
+# 

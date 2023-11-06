@@ -84,8 +84,6 @@ marque --> aussi un titre de propriétée intelectuelle, cela octroit differents
 
 marque --> droit d'exploitation, exclusif, titulaire ? exploitation
 
-
-
 **sujet 1** la marque est un signe distinctif:
 
 - qu'est ce qu'un signe, quelle forme peut on retenir (est ce qu' un son peut être un marque ?)  
@@ -97,8 +95,6 @@ marque --> droit d'exploitation, exclusif, titulaire ? exploitation
 - il doit être licite  
 
 - est ce qu'il y a un contrôle  
-
-
 
 **sujet 2** titre de ppté intelectuelle
 
@@ -145,3 +141,37 @@ marque --> droit d'exploitation, exclusif, titulaire ? exploitation
   - est elle nécessaire ?
   
   - peut-t-on le louer via une liscence ?
+
+## conflit entre marque et nom de domaine
+
+### nom de domaine agresseur (qui porte atteinte)
+
+conflit entre une marquee et un nom de domaine, la jurice prudence précise les circonstances. Il y aurat une action de contrefaçonsi les conditions sont : 
+
+- Il faut que l'usage du signe soit pratiquer a des commerciales ou publicitaires, donc si on fais usage d'une signe d'une marque hors de ces cas: pas de contrefaçon(si tu site une marque dans un article c'est ok ).
+
+- Il va faloir que le nom de domaine soit dans le meme domaine que la marque. Si il y a nom de domaine identique a la marque, il n'y aurat pas de contrefaçon si c'est des produits differents. 
+
+- il faut que l'enregistrement du nom de domaine soit réaliser de mauvaise fois. 
+  
+  - pour une marque notoire (connue d'une large fraction du grand public) ou pour une marque nomée (connue que par les interessé) il y aurat condamnation pour contrefacon meme si les produits sont differents entre le ndd et la marque car le titulaire du ndd entend benificier de la reconaisance de la marque. Si le site est inexploiter il y aurat préjudice au detriment de la marque.
+
+Lors d'autres types de conflit(dénomination, enseigne, ...) il faut prouver que ses droits exister avant le ndd et il faut prouve qu'il y a confusion dans l'esprit des gens. Si il y arrive, sont action en concurence déloyale pourrat aboutir. Le titulaire dois prouver qu'il y a prejudice si c'est un nom titulaire sinon il n'y aurat pas d'interdiction au ndd.
+
+Il y a d'autres cas tels que le harcelement(vengence entre commercant, etc)
+
+Pour un conflit avec un appelation d'origine controlée (L643-1 code huamin et de peche maritime) le nom qui constitue l'AOC ou toute autre mention l'evoquant ne peuvent etre utiliser pour aucun autre produit similaire lorsque que ce cette utlisation est suceptible d'affaiblir ou detourner la notorieté de l'appelation.
+
+Pour un conflit avec un droit d'auteur (protégées par le droit de reproduction ) on ne peut pas reproduire une oeuvre.
+
+Pour un conflit avec des noms de profession reglementer (avocat, notaire, etc...) il ne va pas etre possible de conserver un ndd si il utililse le nom d'une profession reglementée qu'il exerce pas.
+
+Pour un conflit avec le nom des colectivitée teritoriales (code des postes et des comunication electronique artcile L45-2) sauf si le demandeur justifie d'un intérêt légitime et agit de bonne foi.
+
+### nom de domaine agréssé par une marque
+
+si le ndd est aussi une marque, il utilise le droit des marques. si c'est pas un marque, il peut toujours agir sue la concurence déloyale, autrement dit la marque utilise la notoriétée du ndd.
+
+Si le ndd est une oeuvre de l'esprit, donc original, il serat protogé par les droits d'auteurs donc action de contrefaçon.
+
+On peut saisir une juridication mais il faut determiner le tribunal compétant ( français, autre pays) 
