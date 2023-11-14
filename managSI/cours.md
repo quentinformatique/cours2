@@ -221,6 +221,60 @@ Il sagit d'identifier toutes les taches nécessaires à la réalisation du produ
 
 ### RBS - Ressources Breakdown Structure
 
-liste des ressources qui vont intervenir sur le projet. Ressources "classiques", autres intervenant    
+liste des ressources qui vont intervenir sur le projet. 
 
-# 
+- Ressources "classiques" (client, développeurs, chef de projet, ...)
+
+-  autres intervenant (sous traitans, experts, consultaant)
+
+### Estimation des charges de travail
+
+#### Unitée: jour homme
+
+Unité de mesure correspondant au travil d'une personne pendant une journée.
+
+##### Durée d'une tache
+
+3 possibilitées : 
+
+- si la durée est imposée: on en déduit la charge (ex 1,5 jour de charge)
+
+- si le délai est imposé: la durée est donc contrainte (ex 2 jours)
+
+- si les moyens sont contrains (ex 15 jours)
+
+### CBS - Cost Breakdown Structure
+
+C'est la décomposition arborescente des coûts du projet. il permet d'associer a chaque tache un coût (couts forfaitaires, couts des ressources(travail, consomables, matieres)). Le CBSmakoré de differntes marges et provisions, constitue le budget du projet.
+
+### L'écheancier du projet
+
+- diagramme de jalons
+
+- graphe de projet ou diagrammes de réseau (PERT)
+
+- diagramme a barre ou GANTT
+
+### Comité de Pilotage (COPI)
+
+#### Instance de décision présidée par le commanditaire
+
+- responsable décisionnels (MOA MOE)
+
+- parties prenantes
+
+- chefs de projet
+
+- invité nécessaires
+
+Périodicitée fixe, **compte-rendu obligatoire** 
+
+### Processus de maitrise: comment piloter un projet ?
+
+```mermaid
+graph 
+A(Processus de démarrage) --> B(processus de planification)
+B --> C(Processus d'éxécution)
+C --> B
+C --> D(processus de cloture)
+```
