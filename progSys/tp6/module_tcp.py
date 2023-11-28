@@ -75,7 +75,7 @@ def construire_reponse(bloc):
     # ici, "écho" => on retourne ce qu'on a reçu 
     print('Construction réponse effectuée')
     if os.path.isfile(bloc.decode()):
-        resultat = "HTTP/1.1 200 OK\n\n"
+        resultat = b"HTTP/1.1 200 OK\n\n"
         with open (bloc.decode()) as f: 
             a = f.readlines()
             for i in a:
@@ -84,7 +84,7 @@ def construire_reponse(bloc):
             print(resultat)
     else:
         print("fichier non trouvé")
-        resultat = "HTTP/1.1 404 NOT FOUND\n\n"
+        resultat = b"HTTP/1.1 404 NOT FOUND\n\n"
     return resultat.encode()
 
 
