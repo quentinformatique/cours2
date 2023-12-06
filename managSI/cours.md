@@ -225,7 +225,7 @@ liste des ressources qui vont intervenir sur le projet.
 
 - Ressources "classiques" (client, développeurs, chef de projet, ...)
 
--  autres intervenant (sous traitans, experts, consultaant)
+- autres intervenant (sous traitans, experts, consultaant)
 
 ### Estimation des charges de travail
 
