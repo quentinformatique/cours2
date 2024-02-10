@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:stretchColumns="1,2"
+    tools:context=".MainActivity">
+
+    <TableRow tools:ignore="UselessParent">
+
+        <TextView
+            android:text="@string/prix"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/saisiePrix"
+            android:layout_span="2"
+            android:hint="@string/hintPrix"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow tools:ignore="UselessParent">
+
+        <TextView
+            android:text="@string/reduc"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/saisieReduc"
+            android:layout_span="2"
+            android:hint="@string/hintReduc"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow tools:ignore="UselessParent">
+
+        <TextView
+            android:text="@string/eco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/saisieEco"
+            android:layout_span="2"
+            android:focusable="false"
+            android:hint="@string/hintResult"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow tools:ignore="UselessParent">
+
+        <TextView
+            android:text="@string/payer"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/saisiePayer"
+            android:layout_span="2"
+            android:focusable="false"
+            android:hint="@string/hintResult"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:layout_column="1"
+            android:backgroundTint="@color/green"
+            android:onClick="calculer"
+            android:padding="10dp"
+            android:text="@string/calculer" />
+
+        <Button
+            android:layout_column="2"
+            android:backgroundTint="@color/red"
+            android:onClick="annuler"
+            android:text="@string/annuler" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:src="@drawable/iut" />
+    </TableRow>
+
+
+</TableLayout>

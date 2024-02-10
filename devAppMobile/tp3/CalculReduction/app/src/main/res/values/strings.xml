@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CalculReduction</string>
+    <string name="prix">Prix initial :</string>
+    <string name="reduc">taux de réduction :</string>
+    <string name="eco">Economie réalisée :</string>
+    <string name="payer">A payer :</string>
+    <string name="calculer">Calculer</string>
+    <string name="annuler">Annuler</string>
+    <string name="hintPrix">prix avec les centimes</string>
+    <string name="hintReduc">% de réduction(de 0 à 100)</string>
+    <string name="hintResult">résultat calculé</string>
+</resources>
