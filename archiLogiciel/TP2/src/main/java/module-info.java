@@ -1,10 +1,8 @@
-module src.tp1 {
+module src.tp {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
     requires java.logging;
 
-
-    opens src.tp1 to javafx.fxml;
-    exports src.tp1;
+    exports src.tp2.client to javafx.graphics;
 }
