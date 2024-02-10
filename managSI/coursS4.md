@@ -82,7 +82,3 @@ Detecter les gens favorable et défavorable
 #### 5- Mettre en place des indicateurs, puis plannifier, formaliser
 
 formaliser les actions, les suivre en terme de delais, de coûts.
-
-
-
-
