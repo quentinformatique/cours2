@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AfficheDeuxMessages</string>
+    <string name="bonjour">bonjour</string>
+    <string name="welcome">Bienvenue dans l\'app !</string>
+</resources>

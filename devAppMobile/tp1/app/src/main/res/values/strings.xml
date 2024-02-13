@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AfficheBasique</string>
+    <string name="ma_chaine">Hello world !</string>
+</resources>

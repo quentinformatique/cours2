@@ -27,5 +27,29 @@ DROP trigger IF EXISTS testnum//
 CREATE TRIGGER testnum AFTER UPDATE ON clients
 FOR EACH ROW
 BEGIN
+  IF OLD.TELEPHONE != NEW.TELEPHONE THEN
+    INSERT INTO histo_modifs_clients (MODE, ID_CLIENT, NOM_COLONNE, ANCIENNE_VALEUR, NOUVELLE_VALEUR, LADATE, LHEURE, UTILISATEUR)
+    VALUES ("M", OLD.ID_CLIENT, "telephone", OLD.TELEPHONE, NEW.TELEPHONE, CURDATE(), CURTIME(), CURRENT_USER());
+  END IF;
+ END //
+
+ DELIMITER ;
+
+-- Etape 3 Créer un trigger nommé 'histo_clients_S' qui se déclenchera lors de la suppression d'un
+-- client et qui enregistrera dans la table d'historique, le numéro de téléphone avant la suppression.
+
+DELIMITER //
+DROP TRIGGER IF EXISTS histo_clients_S//
+
+CREATE TRIGGER histo_clients_S
+BEFORE DELETE ON clients
+FOR EACH ROW
+BEGIN
   INSERT INTO histo_modifs_clients (MODE, ID_CLIENT, NOM_COLONNE, ANCIENNE_VALEUR, NOUVELLE_VALEUR, LADATE, LHEURE, UTILISATEUR)
-  VALUES (OLD.MODE, OLD.ID_CLIENT, OLD.NOM_COLONNE, , , , CURDATE(), CURTIME(), CURRENT_USER())
+  VALUES ("S", OLD.ID_CLIENT, "telephone", OLD.TELEPHONE, NULL, CURDATE(), CURTIME(), CURRENT_USER());
+END //
+
+DELIMITER ;
+
+-- Etape 4 Créer un trigger nommé 'histo_clients_C' qui se déclenchera lors de la création d'un client
+-- et qui enregistrera dans la table d'historique, le numéro de téléphone du client créé.

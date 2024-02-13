@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">afficheAleatoire</string>
+    <string name="description">Bienvenue dans l\'application qui génère un nombre aléatoire compris entre 0 et 99</string>
+    <string name="button">Génerer</string>
+    <string name="placeholderNumber">Le nombre généré s\'affichera ici</string>
+    <string name="number">Voici le nombre généré :</string>
+</resources>
