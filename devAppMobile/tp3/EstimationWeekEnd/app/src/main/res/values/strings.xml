@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">EstimationCoutWE</string>
+    <string name="titre1">Envie de changer d\'air ?</string>
+    <string name="titre2">Estimation coût d\'un week-end</string>
+    <string name="titre3">Prolongé ou pas !</string>
+    <string name="label_nombre_jour">Nombre de jours :</string>
+    <string name="label_budget_transport">Budget transport :</string>
+    <string name="label_budget_par_nuit">Budget par nuit :</string>
+    <string name="label_budget_par_repas">Budget par repas :</string>
+    <string name="label_budget_visite_par_jour">Budget visite/sortie par jour :</string>
+    <string name="label_estimation_cout">Estimation du coût :</string>
+    <string name="placeholder_budget_transport">aller-retour</string>
+    <string name="placeholder_budget_par_nuit">avec petit-déj</string>
+    <string name="placeholder_budget_par_repas">prix moyen repas</string>
+    <string name="placeholder_budget_visite_par_jour">visite / extra</string>
+    <string name="checkbox_2eme_repas">inclure 2ème repas dernier jour</string>
+    <string name="resultat_calcule">Résultat calculé</string>
+    <string name="button_calculer">Calculer</string>
+    <string name="button_annuler">Annuler</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+</resources>

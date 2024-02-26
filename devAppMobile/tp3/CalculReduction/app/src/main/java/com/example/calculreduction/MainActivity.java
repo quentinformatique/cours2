@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
     public void annuler(View view) {
+        saisieReduc.setError(null);
         saisiePrix.setText("");
         saisieReduc.setText("");
         saisieEco.setText("");
