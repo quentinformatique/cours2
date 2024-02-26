@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items><item><IdEcriture>1</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-01</laDate><type>SI</type><libelle>Solde début de mois</libelle><montantDebit></montantDebit><montantCredit>1000</montantCredit></item>
+<item><IdEcriture>2</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-03</laDate><type>PR</type><libelle>Prélèvement Loyer</libelle><montantDebit>250</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>3</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-03</laDate><type>VI</type><libelle>Salaire Août</libelle><montantDebit></montantDebit><montantCredit>653</montantCredit></item>
+<item><IdEcriture>4</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-03</laDate><type>RE</type><libelle>Retrait Banque postale</libelle><montantDebit>15</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>5</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-04</laDate><type>CB</type><libelle>MC Donald</libelle><montantDebit>12</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>6</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-05</laDate><type>VI</type><libelle>Versement APL</libelle><montantDebit></montantDebit><montantCredit>50</montantCredit></item>
+<item><IdEcriture>7</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-09</laDate><type>CH</type><libelle>Paiement réparation voiture</libelle><montantDebit>950</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>8</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-10</laDate><type>CH</type><libelle>Chèque Super U</libelle><montantDebit>47</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>9</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-15</laDate><type>CB</type><libelle>Leclerc</libelle><montantDebit>36</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>10</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-18</laDate><type>CB</type><libelle>Kebab Miam</libelle><montantDebit>6</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>11</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-20</laDate><type>PR</type><libelle>Mutuelle</libelle><montantDebit>35</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>12</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-22</laDate><type>RE</type><libelle>Retrait Crédit Agricole</libelle><montantDebit>25</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>13</IdEcriture><IdCompte>1</IdCompte><laDate>2023-09-23</laDate><type>CB</type><libelle>Essence Total</libelle><montantDebit>47</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>14</IdEcriture><IdCompte>2</IdCompte><laDate>2023-01-03</laDate><type>VI</type><libelle>Virement Janvier</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>15</IdEcriture><IdCompte>2</IdCompte><laDate>2023-02-03</laDate><type>VI</type><libelle>Virement Février</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>16</IdEcriture><IdCompte>2</IdCompte><laDate>2023-03-03</laDate><type>VI</type><libelle>Virement Mars</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>17</IdEcriture><IdCompte>2</IdCompte><laDate>2023-04-03</laDate><type>VI</type><libelle>Virement Avril</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>18</IdEcriture><IdCompte>2</IdCompte><laDate>2023-05-03</laDate><type>VI</type><libelle>Virement Mai</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>19</IdEcriture><IdCompte>2</IdCompte><laDate>2023-06-03</laDate><type>VI</type><libelle>Virement Juin</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>20</IdEcriture><IdCompte>2</IdCompte><laDate>2023-07-03</laDate><type>VI</type><libelle>Virement Juillet</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>21</IdEcriture><IdCompte>2</IdCompte><laDate>2023-08-03</laDate><type>VI</type><libelle>Virement Aout</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>22</IdEcriture><IdCompte>2</IdCompte><laDate>2023-09-03</laDate><type>VI</type><libelle>Virement Septembre</libelle><montantDebit></montantDebit><montantCredit>30</montantCredit></item>
+<item><IdEcriture>23</IdEcriture><IdCompte>5</IdCompte><laDate>2023-01-03</laDate><type>VI</type><libelle>Virement LDD Janvier</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>24</IdEcriture><IdCompte>5</IdCompte><laDate>2023-02-03</laDate><type>VI</type><libelle>Virement LDD Février</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>25</IdEcriture><IdCompte>5</IdCompte><laDate>2023-03-03</laDate><type>VI</type><libelle>Virement LDD Mars</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>26</IdEcriture><IdCompte>5</IdCompte><laDate>2023-04-03</laDate><type>VI</type><libelle>Virement LDD Avril</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>27</IdEcriture><IdCompte>5</IdCompte><laDate>2023-05-03</laDate><type>VI</type><libelle>Virement LDD Mai</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>28</IdEcriture><IdCompte>5</IdCompte><laDate>2023-06-03</laDate><type>VI</type><libelle>Virement LDD Juin</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>29</IdEcriture><IdCompte>5</IdCompte><laDate>2023-07-03</laDate><type>VI</type><libelle>Virement LDD Juillet</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>30</IdEcriture><IdCompte>5</IdCompte><laDate>2023-08-03</laDate><type>VI</type><libelle>Virement LDD Aout</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>31</IdEcriture><IdCompte>5</IdCompte><laDate>2023-09-03</laDate><type>VI</type><libelle>Virement LDD Septembre</libelle><montantDebit></montantDebit><montantCredit>25</montantCredit></item>
+<item><IdEcriture>32</IdEcriture><IdCompte>3</IdCompte><laDate>2023-01-03</laDate><type>VI</type><libelle>Virement LDD Janvier</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>33</IdEcriture><IdCompte>3</IdCompte><laDate>2023-02-03</laDate><type>VI</type><libelle>Virement LDD Février</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>34</IdEcriture><IdCompte>3</IdCompte><laDate>2023-03-03</laDate><type>VI</type><libelle>Virement LDD Mars</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>35</IdEcriture><IdCompte>3</IdCompte><laDate>2023-04-03</laDate><type>VI</type><libelle>Virement LDD Avril</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>36</IdEcriture><IdCompte>3</IdCompte><laDate>2023-05-03</laDate><type>VI</type><libelle>Virement LDD Mai</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>37</IdEcriture><IdCompte>3</IdCompte><laDate>2023-06-03</laDate><type>VI</type><libelle>Virement LDD Juin</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>38</IdEcriture><IdCompte>3</IdCompte><laDate>2023-07-03</laDate><type>VI</type><libelle>Virement LDD Juillet</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>39</IdEcriture><IdCompte>3</IdCompte><laDate>2023-08-03</laDate><type>VI</type><libelle>Virement LDD Aout</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>40</IdEcriture><IdCompte>3</IdCompte><laDate>2023-09-03</laDate><type>VI</type><libelle>Virement LDD Septembre</libelle><montantDebit></montantDebit><montantCredit>15</montantCredit></item>
+<item><IdEcriture>41</IdEcriture><IdCompte>3</IdCompte><laDate>2023-07-10</laDate><type>VI</type><libelle>Virement Externe</libelle><montantDebit>35</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>42</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-03</laDate><type>PR</type><libelle>Prélèvement Loyer</libelle><montantDebit>350</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>43</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-03</laDate><type>VI</type><libelle>Salaire Août</libelle><montantDebit></montantDebit><montantCredit>1300</montantCredit></item>
+<item><IdEcriture>44</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-03</laDate><type>RE</type><libelle>Retrait Guichet</libelle><montantDebit>70</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>45</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-04</laDate><type>CB</type><libelle>Restaurant Etoile</libelle><montantDebit>35</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>46</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-05</laDate><type>VI</type><libelle>Heures Supp</libelle><montantDebit></montantDebit><montantCredit>340</montantCredit></item>
+<item><IdEcriture>47</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-09</laDate><type>CH</type><libelle>Achat Leclerc</libelle><montantDebit>225</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>48</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-10</laDate><type>CH</type><libelle>Chèque Mutuelle</libelle><montantDebit>76</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>49</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-15</laDate><type>CB</type><libelle>Auchan</libelle><montantDebit>136</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>50</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-18</laDate><type>CB</type><libelle>Uber Eat</libelle><montantDebit>16</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>51</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-20</laDate><type>PR</type><libelle>Uber Eat</libelle><montantDebit>35</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>52</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-22</laDate><type>RE</type><libelle>Retrait</libelle><montantDebit>75</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>53</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-23</laDate><type>CB</type><libelle>Essence CB</libelle><montantDebit>75</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>54</IdEcriture><IdCompte>4</IdCompte><laDate>2023-09-23</laDate><type>SI</type><libelle>Solde Initial</libelle><montantDebit>2000</montantDebit><montantCredit></montantCredit></item>
+<item><IdEcriture>55</IdEcriture><IdCompte>6</IdCompte><laDate>2023-09-01</laDate><type>SI</type><libelle>Solde début de mois</libelle><montantDebit></montantDebit><montantCredit>300</montantCredit></item>
+<item><IdEcriture>56</IdEcriture><IdCompte>6</IdCompte><laDate>2023-09-09</laDate><type>CH</type><libelle>Paiement réparation voiture</libelle><montantDebit>950</montantDebit><montantCredit></montantCredit></item>
+</items>
