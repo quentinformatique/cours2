@@ -26,7 +26,15 @@ public class ConnexionBD {
      * mongoDb et la renvoie comme résultat. Lève une ConnexionBDException sinon.
      */
     static MongoDatabase getMongoBd()throws ConnexionBDException {
-        // TO DO
+        if(mongoDb == null) {
+            try {
+                MongoClient mongoClient = new MongoClient(IP_SERVEUR_MONGODB, PORT_SERVEUR_MONGODB);
+                mongoDb = mongoClient.getDatabase(BD_APPLICATION);
+            } catch (Exception e) {
+                throw new ConnexionBDException();
+            }
+        }
+        return mongoDb;
     } 
     
 }
