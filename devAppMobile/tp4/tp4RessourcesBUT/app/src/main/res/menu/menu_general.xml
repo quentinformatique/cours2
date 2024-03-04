@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/option_tous"
+        android:title="@string/libelle_tous" />
+    <item
+        android:id="@+id/option_commun"
+        android:title="@string/libelle_commun" />
+    <item
+        android:id="@+id/option_parcoursA"
+        android:title="@string/libelle_parcoursA" />
+    <item
+        android:id="@+id/option_parcoursD"
+        android:title="@string/libelle_parcoursD" />
+    <item
+        android:id="@+id/option_annuler"
+        android:title="@string/libelle_annuler" />
+</menu>
