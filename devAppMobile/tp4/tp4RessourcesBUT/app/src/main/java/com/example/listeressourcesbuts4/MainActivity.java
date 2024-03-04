@@ -3,9 +3,12 @@ package com.example.listeressourcesbuts4;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     String[] modulesA;
     String[] modulesB;
     String[] allModules;
+    TextView titre;
     ArrayAdapter<String> adapter;
 
     @Override
@@ -27,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         this.listView = (ListView) findViewById(R.id.liste_module);
         this.modules = getResources().getStringArray(R.array.tronc_commun);
         this.modulesA = getResources().getStringArray(R.array.parcours_A);
-        this.modulesB = getResources().getStringArray(R.array.parcours_B);
+        this.modulesB = getResources().getStringArray(R.array.parcours_D);
+        this.titre = findViewById(R.id.intitule_liste);
 
         this.allModules = new String[modules.length + modulesA.length + modulesB.length];
         System.arraycopy(modules, 0, allModules, 0, modules.length);
@@ -37,26 +42,37 @@ public class MainActivity extends AppCompatActivity {
         this.adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, new ArrayList<String>());
         this.adapter.addAll(allModules);
         listView.setAdapter(adapter);
+        // on change le texte
+        this.titre.setText(R.string.libelle_tous);
     }
 
-    public void clicTous(View view) {
-        this.adapter.clear();
-        this.adapter.addAll(allModules);
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_general, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
-    public void clicTroncCommun(View view) {
-        this.adapter.clear();
-        this.adapter.addAll(modules);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.option_tous) {
+            this.adapter.clear();
+            this.adapter.addAll(allModules);
+            this.titre.setText(R.string.libelle_tous);
+        } else if (id == R.id.option_commun) {
+            this.adapter.clear();
+            this.adapter.addAll(modules);
+            this.titre.setText(R.string.libelle_commun);
+        } else if (id == R.id.option_parcoursA) {
+            this.adapter.clear();
+            this.adapter.addAll(modulesA);
+            this.titre.setText(R.string.libelle_parcoursA);
+        } else if (id == R.id.option_parcoursD) {
+            this.adapter.clear();
+            this.adapter.addAll(modulesB);
+            this.titre.setText(R.string.libelle_parcoursD);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    public void clicAxeB(View view) {
-        this.adapter.clear();
-        this.adapter.addAll(modulesB);
-    }
-
-    public void clicAxeA(View view) {
-        this.adapter.clear();
-        this.adapter.addAll(modulesA);
-    }
 }

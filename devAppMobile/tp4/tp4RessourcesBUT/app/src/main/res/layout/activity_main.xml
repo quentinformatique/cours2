@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!-- vue de l'activité permettant d'afficher la liste des modules enseignés
          au semestre 4
          fichier activity_main.xml -->
@@ -24,32 +25,26 @@
         android:textSize="@dimen/taille_titre"
         android:text="@string/texte_titre" />
 
-    <!-- 4 boutons permettant de choisir la liste à afficher  :
-            - tous les modules
-            - seulement ceux du tronc commun
-            - seulement ceux de l'axe A
-            - seulement ceux de l'axe B -->
-    <Button
-        style="@style/StyleBouton"
-        android:onClick="clicTous"
-        android:text="@string/libelle_tous"/>
+    <!-- ligne de sous-titre avec l'intitulé de la liste affichée -->
+    <TextView
+        android:id="@+id/intitule_liste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/couleurTitre"
+        android:textStyle="bold"
+        android:textSize="@dimen/taille_titre"
+        android:text="@string/texte_titre" />
 
-    <Button
-        style="@style/StyleBouton"
-        android:onClick="clicTroncCommun"
-        android:text="@string/libelle_commun"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hauteur_barre"
+        android:layout_marginVertical="@dimen/marge_moyenne"
+        android:background="@color/couleurTitre">
 
-    <Button
-        style="@style/StyleBouton"
-        android:onClick="clicAxeA"
-        android:text="@string/libelle_axeA"/>
+    </View>
 
-    <Button
-        style="@style/StyleBouton"
-        android:onClick="clicAxeB"
-        android:text="@string/libelle_axeB"/>
-
-    <!-- liste des modules sélectionnés -->
+    <!-- liste des moodules sélectionnés -->
     <ListView
         android:id="@+id/liste_module"
         android:layout_width="match_parent"

@@ -1,20 +1,18 @@
-<!-- chaînes de caractères de l'application consulter la liste des ressources du
-     semestre 4 du BUT Informatique
-     strings.xml -->
 <resources>
+    <string name="app_name">ListeRessourcesBUTMenu</string>
 
-    <string name="app_name">ListeRessourcesBUTS4</string>
 
     <!-- texte de la ligne de titre -->
     <string name="texte_titre">Liste des ressources du semestre 4</string>
 
-    <!-- libellés des boutons -->
+    <!-- libellés des options du menu  -->
     <string name="libelle_tous">Toutes les ressources</string>
     <string name="libelle_commun">Ressources Tronc Commun</string>
-    <string name="libelle_axeA">Ressources Parcours A</string>
-    <string name="libelle_axeB">Ressources Parcours D</string>
+    <string name="libelle_parcoursA">Ressources parcours A</string>
+    <string name="libelle_parcoursD">Ressources parcours D</string>
+    <string name="libelle_annuler">Annuler</string>
 
-    <!-- message pour confirmer le clic sur une ressource -->
+    <!-- message pour confirmer le clic sur un module -->
     <string name="message_toast">Vous avez sélectionné la ressource %s. Merci !</string>
     <string name="message_toast_coef">"Vous avez sélectionné la ressource %s. "
                                       "Son coefficient est %.1f"</string>
@@ -39,12 +37,14 @@
         <item name="R4_A_12">Automates et langages</item>
     </string-array>
 
-    <!-- tableau des ressources du parcours B-->
-    <string-array name="parcours_B">
+    <!-- tableau des ressources du parcours D-->
+    <string-array name="parcours_D">
         <item name="R4_D_08">Réseau avancé</item>
         <item name="R4_D_09">Outils mathématiques pour la gestion</item>
         <item name="R4_D_10">Management avancé des SI</item>
     </string-array>
+
+
 
     <!-- tableau des coefficients des ressources du parcours A
          ATTENTION : les valeurs sont fictives
@@ -57,10 +57,10 @@
         <item name="R4_A_12">24</item>
     </integer-array>
 
-    <!-- tableau des coefficients des ressources du parcours B
+    <!-- tableau des coefficients des ressources du parcours D
          ATTENTION : les valeurs sont fictives
                      et sont multipliées par 10 -->
-    <integer-array name="coef_parcours_B">
+    <integer-array name="coef_parcours_D">
         <item name="R4_D_08">30</item>
         <item name="R4_D_09">31</item>
         <item name="R4_D_10">32</item>
@@ -78,6 +78,4 @@
         <item name="r4_06">15</item>
         <item name="r4_07">16</item>
     </integer-array>
-
 </resources>
-
