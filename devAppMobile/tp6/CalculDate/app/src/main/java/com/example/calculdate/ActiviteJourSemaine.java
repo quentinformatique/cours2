@@ -17,15 +17,20 @@ import androidx.appcompat.app.AppCompatActivity;
  * Classe activité secondaire de l'application qui effectue des calculs sur les
  * dates.
  * Elle effectue la recherche du jour de la semaine à partir d'une date
- * @author  Servières
+ *
+ * @author Servières
  * @version 1.0
  */
 public class ActiviteJourSemaine extends AppCompatActivity {
 
-    /** Zone pour afficher le résultat */
+    /**
+     * Zone pour afficher le résultat
+     */
     private TextView resultatJourSemaine;
 
-    /** Widget de sélection d'une date */
+    /**
+     * Widget de sélection d'une date
+     */
     private DatePicker selecteurPourJour;
 
 
@@ -33,14 +38,15 @@ public class ActiviteJourSemaine extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activite_jour_semaine);
-        resultatJourSemaine =  findViewById(R.id.resultat_jour);
-        selecteurPourJour =  findViewById(R.id.selecteurDate);
+        resultatJourSemaine = findViewById(R.id.resultat_jour);
+        selecteurPourJour = findViewById(R.id.selecteurDate);
     }
 
     /**
      * Méthode invoquée automatiquement lors d'un clic sur le bouton
      * "Rechercher le jour de la semaine associé à  une date"
-     * @param view  source du clic
+     *
+     * @param view source du clic
      */
     public void clicRechercherJour(View view) {
         int jour = selecteurPourJour.getDayOfMonth();
@@ -48,13 +54,15 @@ public class ActiviteJourSemaine extends AppCompatActivity {
         int an = selecteurPourJour.getYear();
 
         // on affiche le résultat
-        // TODO
+        String jourSemaine = OutilDate.jourSemaine(jour, mois, an);
+        resultatJourSemaine.setText("le jour de la semaine est : " + jourSemaine);
     }
 
     /**
      * Méthode invoquée automatiquement lors d'un clic sur le bouton
      * de remise à zéro
-     * @param view  source du clic
+     *
+     * @param view source du clic
      */
     public void clicRaz(View view) {
         resultatJourSemaine.setText("");
@@ -63,13 +71,19 @@ public class ActiviteJourSemaine extends AppCompatActivity {
     /**
      * Méthode invoquée automatiquement lors d'un clic sur le bouton
      * de retour vers l'activité principale
-     * @param view  source du clic
+     *
+     * @param view source du clic
      */
     public void clicRetour(View view) {
-        // TODO
+        Intent intention = new Intent();
+        intention.putExtra(MainActivity.CLE_MESSAGE, "Merci d'avoir utilisé la recherche du jour");
+        setResult(Activity.RESULT_OK, intention);
+        finish();
     }
 
-   
+    private void traiterResulstatRetour() {
+
+    }
 
 
 }

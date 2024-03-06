@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActiviteEcartDate">       </activity>
+    <activity android:name=".ActiviteJourSemaine">        </activity>
     </application>
 
 </manifest>

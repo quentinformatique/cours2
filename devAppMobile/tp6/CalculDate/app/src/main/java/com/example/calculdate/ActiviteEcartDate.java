@@ -57,7 +57,9 @@ public class ActiviteEcartDate extends AppCompatActivity {
         int an2 = selecteurPourEcart2.getYear();
 
         // on place le résultat dans le TextView
-        // TODO
+        int ecart = OutilDate.ecartDate(jour1, mois1, an1, jour2, mois2, an2);
+        resultatNombreJour.setText(ecart + " jours séparent les 2 dates.");
+
     }
 
     /**
@@ -75,7 +77,11 @@ public class ActiviteEcartDate extends AppCompatActivity {
      * @param view  source du clic
      */
     public void clicRetour(View view) {
-        // TODO
+        // on retourne à l'activité principale en lui envoyant un message
+        Intent intention = new Intent();
+        intention.putExtra("message", "Merci d'avoir utilisé le calcul d'écart");
+        setResult(Activity.RESULT_OK, intention);
+        finish();
     }
 
 }
