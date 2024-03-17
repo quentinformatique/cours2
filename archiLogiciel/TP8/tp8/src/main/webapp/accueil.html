@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion à la boutique</title>
+</head>
+<body>
+<div class="container">
+    <h1>Boutique en ligne</h1>
+    <fieldset>
+        <legend>
+            Accueil
+        </legend>
+        <div class="forms">
+            <form action="AccueilServlet" method="post">
+                <button type="submit">
+                    Connexion Admin
+                </button>
+                <input type="hidden" name="type" value="admin">
+            </form>
+            <form action="Accueilservlet" method="post">
+                <button type="submit">
+                    Connexion Client
+                </button>
+                <input type="hidden" name="type" value="client">
+            </form>
+        </div>
+    </fieldset>
+</div>
+
+</body>
+</html>
