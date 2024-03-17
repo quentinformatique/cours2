@@ -27,6 +27,12 @@
 	max-height:300px;
 }
 
+#ErrorFlag {
+	/* Drapeau affiché en cas d'erreur */
+	border: 1px solid black;
+	max-height: 200px;
+}
+
 .flagKO {
 	/* Taille Drapeau case erreur */
 	height:100px;
@@ -64,4 +70,8 @@
   width: 8em;
   margin-top: -2.5em;
   margin-right: 5px;
+}
+
+span {
+	margin-left: 10px;
 }
