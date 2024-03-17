@@ -77,11 +77,10 @@ public class ActiviteEcartDate extends AppCompatActivity {
      * @param view  source du clic
      */
     public void clicRetour(View view) {
-        // on retourne à l'activité principale en lui envoyant un message
-        Intent intention = new Intent();
-        intention.putExtra("message", "Merci d'avoir utilisé le calcul d'écart");
-        setResult(Activity.RESULT_OK, intention);
-        finish();
-    }
-
+    Intent intention = new Intent();
+    intention.putExtra("message", "Merci d'avoir utilisé le calcul d'écart");
+    intention.putExtra(MainActivity.CLE_RESULTAT, "Dernière recherche : " + resultatNombreJour.getText().toString());
+    setResult(Activity.RESULT_OK, intention);
+    finish();
+}
 }

@@ -77,7 +77,9 @@ public class ActiviteJourSemaine extends AppCompatActivity {
     public void clicRetour(View view) {
         Intent intention = new Intent();
         intention.putExtra(MainActivity.CLE_MESSAGE, "Merci d'avoir utilisé la recherche du jour");
+        intention.putExtra(MainActivity.CLE_RESULTAT, "Dernière recherche : " + resultatJourSemaine.getText().toString());
         setResult(Activity.RESULT_OK, intention);
+        setResult(Activity.RESULT_OK);
         finish();
     }
 

@@ -10,6 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -26,6 +30,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
+
     /** Zone de texte qui affiche le message de retour,
      *  après retour de l'activité fille
      */
@@ -33,11 +38,27 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String CLE_MESSAGE = "MESSAGE";
 
+    public static final String CLE_RESULTAT = "RESULTAT";
+
+    private ActivityResultLauncher<Intent> activiteJourSemaineLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         messageRetour = findViewById(R.id.retour_activite);
+
+        activiteJourSemaineLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                this::RetourActiviteJourSemaine);
+    }
+
+    private void RetourActiviteJourSemaine(ActivityResult resultat) {
+        Intent intention = resultat.getData();
+        if (resultat.getResultCode() == Activity.RESULT_OK) {
+            String message = intention.getStringExtra(CLE_MESSAGE);
+            messageRetour.setText(message);
+        }
     }
 
     /**
@@ -56,8 +77,7 @@ public class MainActivity extends AppCompatActivity {
      * @param bouton sur lequel l'utilisateur a cliqué
      */
     public void clicEcartDate(View bouton) {
-        Intent intention = new Intent(MainActivity.this, ActiviteEcartDate.class);
-        startActivity(intention);
+        activiteJourSemaineLauncher.launch(new Intent(MainActivity.this, ActiviteEcartDate.class));
     }
 
     
