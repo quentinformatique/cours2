@@ -1,0 +1,73 @@
+QUESTION 1
+
+
+// Création des enseignants
+CREATE (dupondpaul:Utilisateur:Enseignant {nom: "DUPOND", prenom: "Paul", identifiant: "dupondpaul", mot_de_passe: "123"})
+CREATE (machinremy:Utilisateur:Enseignant {nom: "MACHIN", prenom: "Rémy", identifiant: "machinremy", mot_de_passe: "456"})
+CREATE (johnsonboris:Utilisateur:Enseignant {nom: "JOHNSON", prenom: "Boris", identifiant: "johnsonboris", mot_de_passe: "789"})
+
+// Création des matières
+CREATE (mathematiques:Matiere {intitule: "Mathématiques"})
+CREATE (progjava:Matiere {intitule: "Programmation Java"})
+CREATE (conceptionobjet:Matiere {intitule: "Conception Objet"})
+CREATE (anglais:Matiere {intitule: "Anglais"})
+
+// Relation enseigne
+CREATE (dupondpaul)-[:Enseigne]->(mathematiques)
+CREATE (machinremy)-[:Enseigne]->(progjava)
+CREATE (machinremy)-[:Enseigne]->(conceptionobjet)
+CREATE (johnsonboris)-[:Enseigne]->(anglais)
+
+// Création des étudiants
+CREATE (cartieraxel:Utilisateur:Etudiant {nom: "CARTIER", prenom: "Axel", identifiant: "cartieraxel", mot_de_passe: "1"})
+CREATE (barthezenzo:Utilisateur:Etudiant {nom: "BARTHEZ", prenom: "Enzo", identifiant: "barthezenzo", mot_de_passe: "2"})
+CREATE (manoukianlea:Utilisateur:Etudiant {nom: "MANOUKIAN", prenom: "Léa", identifiant: "manoukianlea", mot_de_passe: "3"})
+CREATE (petruzzitony:Utilisateur:Etudiant {nom: "PETRUZZI", prenom: "Tony", identifiant: "petruzzitony", mot_de_passe: "4"})
+CREATE (dutroncmaxime:Utilisateur:Etudiant {nom: "DUTRONC", prenom: "Maxime", identifiant: "dutroncmaxime", mot_de_passe: "5"})
+CREATE (montalbanmaeva:Utilisateur:Etudiant {nom: "MONTALBAN", prenom: "Maéva", identifiant: "montalbanmaeva", mot_de_passe: "6"})
+
+// Relation suit
+CREATE (cartieraxel)-[:Etudie]->(mathematiques)
+CREATE (cartieraxel)-[:Etudie]->(progjava)
+CREATE (cartieraxel)-[:Etudie]->(conceptionobjet)
+CREATE (barthezenzo)-[:Etudie]->(progjava)
+CREATE (manoukianlea)-[:Etudie]->(anglais)
+CREATE (petruzzitony)-[:Etudie]->(progjava)
+CREATE (petruzzitony)-[:Etudie]->(conceptionobjet)
+CREATE (petruzzitony)-[:Etudie]->(anglais)
+CREATE (dutroncmaxime)-[:Etudie]->(anglais)
+CREATE (montalbanmaeva)-[:Etudie]->(mathematiques)
+
+
+
+QUESTION 2
+
+// Requête qui recherche et renvoie tous les utilisateurs
+MATCH (u:Utilisateur)
+RETURN u;
+
+// Requête qui recherche et renvoie tous les enseignants
+MATCH (u:Utilisateur:Enseignant)
+RETURN u;
+
+// Requête paramétrée qui recherche et renvoie toutes les matières enseignées par un enseignant
+MATCH (e:Enseignant {identifiant: $identifiant})-[:Enseigne]->(m:Matiere)
+RETURN m;
+
+// Requête paramétrée qui recherche et renvoie tous les étudiants inscrits dans une matière
+MATCH (e:Etudiant)-[:Etudie]->(m:Matiere {intitule: $intitule})
+RETURN e;
+
+// Requête paramétrée qui affecte une note à un étudiant dans une matière qu’il étudie
+MATCH (e:Etudiant {identifiant: $identifiant_etudiant})-[:Etudie]->(m:Matiere {intitule: $intitule_matiere})
+SET e.note = $valeur_note;
+
+// Requête paramétrée qui renvoie la note d'un étudiant dans une matière qu'il étudie
+MATCH (e:Etudiant {identifiant: $identifiant_etudiant})-[:Etudie]->(m:Matiere {intitule: $intitule_matiere})
+RETURN e.note;
+
+// Requête paramétrée qui recherche et renvoie toutes les notes d'un étudiant
+MATCH (e:Etudiant {identifiant: $identifiant_etudiant})-[:Etudie]->(m:Matiere)
+RETURN m.intitule, e.note;
+
+
