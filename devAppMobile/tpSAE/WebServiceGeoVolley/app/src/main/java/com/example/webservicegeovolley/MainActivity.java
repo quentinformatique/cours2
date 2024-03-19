@@ -21,8 +21,7 @@ import org.json.JSONArray;
 
 
 /**
- * TODO
- * @author 
+ * @author COSTES Quentin
  * @version 1.0
  */
 public class MainActivity extends AppCompatActivity {
@@ -126,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
      * Invoquée lors du clic sur le bouton rechercher un code postal
      * @param view  Bouton à l'origine du clic
      */
+
     public void clicRechercherCode(View view) {
         // TODO
 
